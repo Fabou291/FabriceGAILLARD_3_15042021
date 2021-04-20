@@ -1,0 +1,19 @@
+/* -- Déclaration de toutes les fonts -- */
+
+/* ++ Shrikhand Font ++ */
+@font-face {
+    font-family: "Shrikhand";
+    src: url("public/fonts/Shrikhand-Regular.ttf") format('truetype');
+}
+
+/* ++ Roboto Font ++ */
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("public/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("public/fonts/Roboto/Roboto-Bold.ttf") format('truetype');
+}
