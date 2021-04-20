@@ -1,0 +1,28 @@
+.layout-header {
+    height : 63px;
+    &__logo {
+        font-family : 'Shrikhand', Arial, Helvetica, sans-serif;
+        font-size : 30pt;
+    }
+    &__return-btn {
+
+    }
+}
+
+.layout-main {
+    flex : 1;
+}
+
+.layout-footer {
+    height : 197px;
+    &__logo {
+        
+    }
+    &__legal-mentions{
+        
+    }
+}
+
+.layout-header, .layout-main, .layout-footer{
+    border : 1px solid black;
+}

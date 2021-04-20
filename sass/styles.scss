@@ -1,5 +1,11 @@
 @import "./vendors/resetMeyer";
+
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+
+@import "./base/font";
+@import "./base/base";
+
+@import "./layouts/layout"
