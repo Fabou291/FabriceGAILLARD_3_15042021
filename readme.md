@@ -7,8 +7,8 @@
     - Texte: Roboto
 - Couleurs :
     - primary : #9356DC
-    - primary : #FF79DA
-    - primary : #99E2D0
+    - secondary : #FF79DA
+    - tertiary : #99E2D0
 
 
 ## Enjeux
