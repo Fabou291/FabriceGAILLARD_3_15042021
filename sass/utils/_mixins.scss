@@ -1,0 +1,7 @@
+@mixin typography($name) {
+    font-family : $name, Arial, Helvetica, sans-serif;
+}
+
+@mixin box-shadow {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}

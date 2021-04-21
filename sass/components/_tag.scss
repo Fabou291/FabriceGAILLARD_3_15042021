@@ -1,0 +1,14 @@
+.tag {
+    padding : 7.5px 12px;
+
+    border-radius: 2px;
+
+    @include typography('Roboto-Medium');
+    font-size : 14px;
+
+    &--new {
+        color : $tertiary-font;
+        background-color : $tertiary;
+    }
+
+}

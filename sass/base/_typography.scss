@@ -7,17 +7,16 @@
 }
 
 /* ++ Roboto Font ++ */
-@font-face {
-    font-family: "Roboto-Light";
-    src: url("../fonts/Roboto/Roboto-Light.ttf") format('truetype');
-}
+$RobotoFonts : (
+    "Roboto-Light",
+    "Roboto-Regular",
+    "Roboto-Medium",
+    "Roboto-Bold"
+);
 
-@font-face {
-    font-family: "Roboto-Regular";
-    src: url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: "Roboto-Bold";
-    src: url("../fonts/Roboto/Roboto-Bold.ttf") format('truetype');
+@each $name in $RobotoFonts {
+    @font-face {
+        font-family:$name;
+        src: url("../fonts/Roboto/#{$name}.ttf") format('truetype');
+    }
 }

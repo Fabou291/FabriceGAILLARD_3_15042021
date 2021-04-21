@@ -34,7 +34,7 @@
     
     &__logo {
         display: block;
-        font-family : 'Shrikhand', Arial, Helvetica, sans-serif;
+        @include typography('Shrikhand');
         font-size : 18px;
         margin : 0 0 23px 0;
     }
@@ -44,7 +44,7 @@
         letter-spacing: 0.1px;
 
         &--icon {
-            font-family: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+            @include typography('Roboto-Regular');
             & i {
                 display : inline-block;
                 font-size : 12px;
