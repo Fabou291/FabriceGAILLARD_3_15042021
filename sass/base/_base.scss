@@ -8,6 +8,18 @@ body {
     min-height : 100vh;
     width : 100%;
 
-    font-family : 'Roboto-Regular', Arial, Helvetica, sans-serif;
+    font-family : 'Roboto-Ligth', Arial, Helvetica, sans-serif;
+    color : $primary-font;
     font-size : 1em;
+}
+
+a {
+    text-decoration: none;
+    color : inherit;
+    &:hover{
+        color : inherit;
+    }
+    &:visited{
+        color : inherit;
+    }
 }

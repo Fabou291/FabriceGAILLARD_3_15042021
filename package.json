@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/styles.scss:./public/css/styles.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
   },
   "author": "Fabrice GAILLARD",
   "license": "ISC"
