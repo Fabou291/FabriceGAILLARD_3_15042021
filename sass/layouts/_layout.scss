@@ -9,6 +9,8 @@
         font-family : 'Shrikhand', Arial, Helvetica, sans-serif;
         color : $secondary-font;
         font-size : 30px;
+
+        padding-top : 6px;
     }
 
     &__return-btn {
@@ -44,7 +46,7 @@
         letter-spacing: 0.1px;
 
         &--icon {
-            @include typography('Roboto-Regular');
+            @include RobotoTypo('Regular');
             & i {
                 display : inline-block;
                 font-size : 12px;

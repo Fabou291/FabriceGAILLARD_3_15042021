@@ -21,39 +21,102 @@
     </header>
     
     <main class="l-main">
+        <form class='research'>
+            <label for="research__field">
+                <i class="fas fa-map-marker-alt research__icon"></i>
+                <input id="research__field" name="research__field" class="research__field" type="text" value="Paris, Belleville" placeholder="Où ?">
+            </label>
+        </form>
 
-        <section class="research">
-            <form>
-                <i class="fas fa-map-marker-alt"></i>
-                <input class="research__field" type="text" value="" placeholder="">
-            </form>
+        <section class="presentation">
             <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants des restaurants d'exception, sélectionnés par nos soins</p>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <div class='btn'><a href="#" >Explorer nos restaurants</a></div>
         </section>
 
         <section class="operation">
             <h2>Fonctionnement</h2>
-
-            <div class="btn-step">
-                <div class="btn-step__number" >1</div>
-                <span class="fas fa-mobile-alt btn-step__icon"></span>
-                <span class="btn-step__description" >Choisissez un restaurant</span>
-            </div>
+            <ol class="operation__list">
+                <li class="operation__list-item">
+                    <a href="" class="step-btn">
+                        <div class="step-btn__number">1</div>
+                        <span class="fas fa-mobile-alt step-btn__icon"></span>
+                        <span class="step-btn__description" >Choisissez un restaurant</span>                        
+                    </a>
+                </li>
+                <li class="operation__list-item">
+                    <a href="" class="step-btn">
+                        <div class="step-btn__number">2</div>
+                        <span class="fas fa-list-ul step-btn__icon"></span>
+                        <span class="step-btn__description" >Composez votre menu</span>                        
+                    </a>
+                </li>
+                <li class="operation__list-item">
+                    <a href="" class="step-btn">
+                        <div class="step-btn__number">3</div>
+                        <span class="fas fa-store step-btn__icon"></span>
+                        <span class="step-btn__description" >Dégustez au restaurant</span>                        
+                    </a>
+                </li>
+            </ol>
         </section>
 
         <section class="restaurant">
             <h2>Restaurants</h2>
             
             <article class="card">
-                <span class="tag tag--new card__tag">Nouveau</span>
-                <img class="card__thumb" src="images/restaurants/s/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
-                <div class="card__caption">
-                    <div>
-                        <h3 class="card__title" >La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                <a href="#" >
+                    <span class="tag tag--new card__tag">Nouveau</span>
+                    <img class="card__thumb card__thumb--v-bottom" src="images/restaurants/s/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
+                    <div class="card__caption">
+                        <div>
+                            <h3 class="card__title" >La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <i href="#" class="far fa-heart card__like"></i>
                     </div>
-                    <a href="" class="far fa-heart card__like"></a>
-                </div>
+                </a>                
+            </article>
+
+            <article class="card">
+                <a href="#" >
+                    <span class="tag tag--new card__tag">Nouveau</span>
+                    <img class="card__thumb card__thumb--v-center" src="images/restaurants/s/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
+                    <div class="card__caption">
+                        <div>
+                            <h3 class="card__title" >La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <i href="" class="far fa-heart card__like"></i>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card">
+                <a href="">
+                    <img class="card__thumb card__thumb--v-middle" src="images/restaurants/s/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
+                    <div class="card__caption">
+                        <div>
+                            <h3 class="card__title" >A la francaise</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <i href="" class="far fa-heart card__like"></i>
+                    </div>                    
+                </a>
+
+            </article>
+
+            <article class="card">
+                <a href="">
+                    <img class="card__thumb card__thumb--v-middle" src="images/restaurants/s/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
+                    <div class="card__caption">
+                        <div>
+                            <h3 class="card__title" >Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i href="" class="far fa-heart card__like"></i>
+                    </div>                    
+                </a>
             </article>
 
         </section>

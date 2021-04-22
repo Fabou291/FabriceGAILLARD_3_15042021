@@ -92,15 +92,19 @@ body {
   font-size: 1em;
 }
 
-a {
+a, input {
   text-decoration: none;
   color: inherit;
 }
-a:hover {
+a:hover, input:hover {
   color: inherit;
 }
-a:visited {
+a:visited, input:visited {
   color: inherit;
+}
+
+button {
+  border: none;
 }
 
 h1, h2, h3 {
@@ -115,12 +119,35 @@ h2 {
   margin-bottom: 24px;
 }
 
+h1 {
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 17.5px 22px;
+  color: white;
+  border-radius: 100px;
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.btn a {
+  width: 100%;
+  height: 100%;
+}
+
 .card {
+  display: block;
   position: relative;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
+}
+.card:not(:last-child) {
+  margin: 0 0 18px 0;
 }
 .card__tag {
   position: absolute;
@@ -131,7 +158,12 @@ h2 {
   height: 174px;
   width: 100%;
   object-fit: cover;
+}
+.card__thumb--v-bottom {
   object-position: center bottom;
+}
+.card__thumb--v-center {
+  object-position: center center;
 }
 .card__caption {
   display: flex;
@@ -151,6 +183,35 @@ h2 {
   margin: 0 9px 0 0;
   padding: 3px;
   margin-left: auto;
+}
+
+.step-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 71px;
+  padding: 0 34px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.step-btn__number {
+  width: 24px;
+  position: absolute;
+  left: -12px;
+  background-color: #9356DC;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+.step-btn__icon {
+  font-size: 20px;
+  width: 40px;
+  color: #7e7e7e;
 }
 
 .tag {
@@ -175,6 +236,7 @@ h2 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   color: #101010;
   font-size: 30px;
+  padding-top: 6px;
 }
 .l-header__return-btn {
   position: absolute;
@@ -215,6 +277,65 @@ h2 {
 }
 .l-footer__list-item a:hover {
   text-decoration: underline;
+}
+
+.l-header__return-btn {
+  display: none !important;
+}
+
+.research {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) inset;
+  background-color: #eaeaea;
+  color: #353535;
+}
+.research label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: text;
+}
+.research__icon {
+  margin: 0 15px 0 0;
+}
+.research__field {
+  height: 50px;
+  width: 140px;
+  border: none;
+  background-color: transparent;
+  font-size: 15.5px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.research__field:focus {
+  outline: none;
+}
+
+.presentation {
+  padding: 39px 20px 56px 20px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.presentation h1 {
+  padding: 0 30px;
+}
+.presentation p {
+  line-height: 22px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.operation {
+  padding: 56px 20px;
+}
+.operation h2 {
+  margin-bottom: 34px;
+}
+.operation__list {
+  padding: 0 12px;
+}
+.operation__list-item:not(:last-child) {
+  margin: 0 0 24px 0;
 }
 
 .restaurant {

@@ -1,11 +1,17 @@
 .card {
+    display : block;
     position :relative;
+    
     overflow : hidden;
 
     background-color: white;
     @include box-shadow;
 
     border-radius: 15px;
+
+    &:not(:last-child){
+        margin : 0 0 18px 0;
+    }
 
     &__tag {
         position : absolute;
@@ -17,7 +23,13 @@
         height : 174px;
         width : 100%;
         object-fit : cover;
-        object-position: center bottom;
+
+        &--v-bottom {
+            object-position: center bottom;
+        }
+        &--v-center {
+            object-position: center center;
+        }
     }
 
     &__caption {
@@ -27,7 +39,7 @@
     }
 
     &__title {
-        @include typography('Roboto-Bold');
+        @include RobotoTypo('Bold');
         font-size : 18px;
         margin : 0 0 7px 0;
     }
