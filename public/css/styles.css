@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* -- Colors -- */
 /* -- Fonts -- */
+/* -- global -- */
+/* -- home -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -61,7 +63,6 @@ table {
   font-family: "Shrikhand";
   src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
 }
-/* ++ Roboto Font ++ */
 @font-face {
   font-family: "Roboto-Light";
   src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
@@ -107,31 +108,16 @@ button {
   border: none;
 }
 
-h1, h2, h3 {
-  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
-}
-
-h1, h2 {
-  font-size: 24px;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-h1 {
-  line-height: 28px;
-  margin-bottom: 12px;
-}
-
 .btn {
   display: inline-block;
   padding: 17.5px 22px;
-  color: white;
+  min-width: 186px;
   border-radius: 100px;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
 }
 .btn a {
   width: 100%;
@@ -158,11 +144,6 @@ h1 {
   height: 174px;
   width: 100%;
   object-fit: cover;
-}
-.card__thumb--v-bottom {
-  object-position: center bottom;
-}
-.card__thumb--v-center {
   object-position: center center;
 }
 .card__caption {
@@ -183,6 +164,63 @@ h1 {
   margin: 0 9px 0 0;
   padding: 3px;
   margin-left: auto;
+}
+
+.check-card {
+  position: relative;
+  display: flex;
+  padding: 14px 11px 12px 11px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.check-card:not(:last-child) {
+  margin-bottom: 14px;
+}
+.check-card__content {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  line-height: 18px;
+}
+.check-card__content div {
+  flex: 1;
+  min-width: 0;
+}
+.check-card__title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.check-card__text {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.check-card__price {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #101010;
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+}
+.check-card__check {
+  position: absolute;
+  right: calc(60px * -1);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  color: white;
+  line-height: 100%;
+  background-color: #99E2D0;
+  /*transform: translateX($widthCheck);*/
 }
 
 .step-btn {
@@ -225,26 +263,59 @@ h1 {
   background-color: #99E2D0;
 }
 
+.locationForm {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) inset;
+  background-color: #eaeaea;
+  color: #353535;
+}
+.locationForm label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: text;
+}
+.locationForm__icon {
+  margin: 0 15px 0 0;
+}
+.locationForm__field {
+  width: 140px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  font-size: 15.5px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.locationForm__field:focus {
+  outline: none;
+}
+
 .l-header {
   position: relative;
-  height: 63px;
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 11px 0 0 0;
 }
 .l-header__logo {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  color: #101010;
-  font-size: 30px;
-  padding-top: 6px;
+  width: 164px;
+  border: 1px solid red;
 }
 .l-header__return-btn {
   position: absolute;
-  display: block !important;
+  display: none !important;
   left: 0;
   padding: 0 23px;
-  line-height: 63px !important;
+  height: 100%;
   border: 1px solid red;
+  font-size: 20px;
+}
+.l-header__return-btn--visible {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .l-main {
@@ -252,16 +323,20 @@ h1 {
 }
 
 .l-footer {
-  height: 197px;
+  min-height: 197px;
   background-color: #353535;
   color: white;
   padding: 25px;
 }
 .l-footer__logo {
+  width: 99px;
   display: block;
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  margin: 0 0 23px 0;
+  margin: 0 0 31px 0;
+}
+.l-footer__logo path {
+  fill: white;
 }
 .l-footer__list-item {
   padding: 0 0 10px 0;
@@ -279,45 +354,17 @@ h1 {
   text-decoration: underline;
 }
 
-.l-header__return-btn {
-  display: none !important;
-}
-
-.research {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) inset;
-  background-color: #eaeaea;
-  color: #353535;
-}
-.research label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  cursor: text;
-}
-.research__icon {
-  margin: 0 15px 0 0;
-}
-.research__field {
-  height: 50px;
-  width: 140px;
-  border: none;
-  background-color: transparent;
-  font-size: 15.5px;
-  letter-spacing: 0.2px;
-  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
-}
-.research__field:focus {
-  outline: none;
-}
-
 .presentation {
   padding: 39px 20px 56px 20px;
   background-color: #f6f6f6;
   text-align: center;
 }
 .presentation h1 {
+  margin-bottom: 12px;
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+  font-size: 24px;
   padding: 0 30px;
+  line-height: 28px;
 }
 .presentation p {
   line-height: 22px;
@@ -330,6 +377,8 @@ h1 {
 }
 .operation h2 {
   margin-bottom: 34px;
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+  font-size: 24px;
 }
 .operation__list {
   padding: 0 12px;
@@ -341,6 +390,59 @@ h1 {
 .restaurant {
   background-color: #f6f6f6;
   padding: 56px 20px;
+}
+.restaurant h2 {
+  margin-bottom: 34px;
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.restau__thumb {
+  position: absolute;
+  top: 63px;
+  z-index: -1;
+  height: 255px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.restau__menu {
+  margin-top: 217px;
+  padding: 38px 14px 33px 14px;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+}
+.restau__caption {
+  display: flex;
+  align-items: center;
+  margin: 0 5px 31px 5px;
+}
+.restau__name {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  color: #101010;
+  font-size: 28px;
+}
+.restau__like {
+  font-size: 23px;
+  margin: 0 0 0 auto;
+}
+.restau__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.menu-section__title {
+  width: 40px;
+  padding: 7px 0;
+  margin-bottom: 14px;
+  font-size: 15.5px;
+  white-space: nowrap;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu-section:not(:last-child) {
+  margin: 0 0 35px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

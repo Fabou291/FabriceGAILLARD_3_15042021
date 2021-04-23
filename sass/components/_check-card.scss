@@ -1,0 +1,72 @@
+$widthCheck : 60px;
+
+.check-card {
+    position : relative;
+    display : flex;
+    padding : 14px 11px 12px 11px;
+    overflow : hidden;
+
+
+    border-radius : 15px;
+
+    
+
+    background-color: white;
+    @include setBoxShadow;
+
+    &:not(:last-child) {
+        margin-bottom : 14px;
+    }
+
+    &__content {
+        display : flex;
+        align-items: flex-end;
+        width : 100%;
+        line-height: 18px;
+
+        div {
+            flex: 1;
+            min-width: 0;            
+        }
+    }
+
+    &__title {
+        margin-bottom : 6px;
+        
+        font-size : 18px;
+        @include robotoTypo('Bold');
+        @include setEllipsis
+    }
+
+    &__text {
+        font-size : 15px;
+
+        @include setEllipsis;
+    }
+
+
+    &__price {
+        font-size : 15px;
+        letter-spacing: 0;
+        color : $secondary-font;
+        @include robotoTypo('Bold');
+    }
+
+    &__check {
+        position : absolute;
+        right : calc(#{$widthCheck} * -1);
+        top : 0;
+        @include setFlexCenterCenter;
+        @include setSize($widthCheck, 100%);
+
+
+        color : white;
+        line-height : 100%;
+
+        background-color: $tertiary;
+        /*transform: translateX($widthCheck);*/
+    }
+
+    
+
+}

@@ -5,7 +5,7 @@
     overflow : hidden;
 
     background-color: white;
-    @include box-shadow;
+    @include setBoxShadow;
 
     border-radius: 15px;
 
@@ -23,13 +23,7 @@
         height : 174px;
         width : 100%;
         object-fit : cover;
-
-        &--v-bottom {
-            object-position: center bottom;
-        }
-        &--v-center {
-            object-position: center center;
-        }
+        object-position: center center;
     }
 
     &__caption {
@@ -39,7 +33,7 @@
     }
 
     &__title {
-        @include RobotoTypo('Bold');
+        @include robotoTypo('Bold');
         font-size : 18px;
         margin : 0 0 7px 0;
     }

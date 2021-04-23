@@ -1,4 +1,5 @@
-@mixin RobotoTypo($styleName) {
+/* -- global -- */
+@mixin robotoTypo($styleName) {
     font-family : 'Roboto-#{$styleName}', Arial, Helvetica, sans-serif;
 }
 
@@ -6,6 +7,59 @@
     font-family : $name, Arial, Helvetica, sans-serif;
 }
 
-@mixin box-shadow {
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+@mixin setBoxShadow ($color : rgba(0,0,0,0.15)) {
+    box-shadow: 0 5px 10px $color;
+}
+
+@mixin setSize($width : auto, $height : auto){
+    width : $width;
+    height : $height;
+}
+
+@mixin setFlexCenterCenter($isImportant : false) {
+    $importantTag : '';
+    @if($isImportant){ $importantTag : '!important'; }
+
+    display : flex #{$importantTag};
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin objectFitCoverCenterCenter ($height, $width : 100%) {
+    height: $height;
+    width: $width;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+@mixin setEllipsis{
+    text-overflow: ellipsis;
+    white-space : nowrap;
+    overflow : hidden;
+}
+
+@mixin setRobotoFonts {
+    $RobotoFonts : (
+        "Roboto-Light",
+        "Roboto-Regular",
+        "Roboto-Medium",
+        "Roboto-Bold"
+    );
+
+    @each $name in $RobotoFonts {
+        @font-face {
+            font-family:$name;
+            src: url("../fonts/Roboto/#{$name}.ttf") format('truetype');
+        }
+    }
+}
+
+/* -- home -- */
+@mixin setTitleHome($margin-bottom) {
+    margin-bottom : $margin-bottom;
+
+    @include robotoTypo('Bold');
+    font-size : 24px;
 }

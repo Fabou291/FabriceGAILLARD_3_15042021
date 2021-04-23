@@ -5,12 +5,12 @@
     height : 71px;
     padding : 0 34px;
 
-    @include box-shadow;
+    @include setBoxShadow;
     background-color: $fifth;
 
     border-radius : 20px;
 
-    @include RobotoTypo('Medium');
+    @include robotoTypo('Medium');
 
 
     &__number {
@@ -24,7 +24,7 @@
 
         color : white;
         text-align : center;
-        @include RobotoTypo('Regular');
+        @include robotoTypo('Regular');
         font-size : 14px;
         line-height: 24px;
     }

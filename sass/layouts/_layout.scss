@@ -1,44 +1,57 @@
+$heightHeader : 52px;
+$marginHeader : 11px 0 0 0;
+
 .l-header {
     position : relative;
-    height : 63px;
-    display : flex;
-    justify-content: center;
-    align-items: center;
+    height : $heightHeader;
+    @include setFlexCenterCenter;
+    margin : $marginHeader;
     
     &__logo {
-        font-family : 'Shrikhand', Arial, Helvetica, sans-serif;
-        color : $secondary-font;
-        font-size : 30px;
-
-        padding-top : 6px;
+        width : 164px;
+        border : 1px solid red;
     }
 
     &__return-btn {
         position : absolute;
-        display:block !important;
+        display : none !important;
         left : 0;
         padding : 0 23px;
-        line-height : 63px !important;
+        height: 100%;
 
         border : 1px solid red;
+
+        font-size : 20px;
+
+        &--visible {
+            @include setFlexCenterCenter($isImportant : true);
+        }
     }
 }
+
+
 
 .l-main {
     flex : 1;
 }
 
 .l-footer {
-    height : 197px;
+    min-height : 197px;
     background-color : $fourth;
     color : white;
     padding : 25px;
     
     &__logo {
+        width : 99px;
         display: block;
         @include typography('Shrikhand');
         font-size : 18px;
-        margin : 0 0 23px 0;
+        margin : 0 0 31px 0;
+        
+        path {
+            fill : white;
+        }
+
     }
 
     &__list-item {
@@ -46,7 +59,7 @@
         letter-spacing: 0.1px;
 
         &--icon {
-            @include RobotoTypo('Regular');
+            @include robotoTypo('Regular');
             & i {
                 display : inline-block;
                 font-size : 12px;
