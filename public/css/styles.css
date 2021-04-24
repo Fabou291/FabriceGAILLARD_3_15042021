@@ -79,6 +79,16 @@ table {
   font-family: "Roboto-Bold";
   src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -118,6 +128,7 @@ button {
   font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
+  user-select: none;
 }
 .btn a {
   width: 100%;
@@ -175,14 +186,38 @@ button {
   background-color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+.check-card--fadeIn-dl-1 {
+  animation: fadeIn 0.5s ease-in-out 0s backwards;
+}
+.check-card--fadeIn-dl-2 {
+  animation: fadeIn 0.5s ease-in-out 0.15s backwards;
+}
+.check-card--fadeIn-dl-3 {
+  animation: fadeIn 0.5s ease-in-out 0.3s backwards;
+}
+.check-card--fadeIn-dl-4 {
+  animation: fadeIn 0.5s ease-in-out 0.45s backwards;
+}
 .check-card:not(:last-child) {
   margin-bottom: 14px;
+}
+.check-card:hover .check-card__check {
+  width: 60px;
+  transform: translateX(-30px);
+}
+.check-card:hover .check-card__icon-check {
+  transform: rotate(360deg);
+}
+.check-card:hover .check-card__content {
+  width: calc(100% - 60px + 11px );
 }
 .check-card__content {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  padding: 0 12px 0 0;
   line-height: 18px;
+  transition: width 0.3s ease-out;
 }
 .check-card__content div {
   flex: 1;
@@ -210,17 +245,22 @@ button {
 }
 .check-card__check {
   position: absolute;
-  right: calc(60px * -1);
+  right: calc(30px * -1);
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
+  width: 30px;
   height: 100%;
   color: white;
-  line-height: 100%;
+  font-size: 20px;
   background-color: #99E2D0;
-  /*transform: translateX($widthCheck);*/
+  transition: width 0.3s, transform 0.3s ease-out;
+  transform: translateX(0);
+}
+.check-card__icon-check {
+  transition: transform 0.3s 0.1s ease-out;
+  transform: rotate(90deg);
 }
 
 .step-btn {
@@ -233,6 +273,15 @@ button {
   background-color: #f6f6f6;
   border-radius: 20px;
   font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.step-btn--fadeIn-dl-1 {
+  animation: fadeIn 0.5s ease-in-out 0s backwards;
+}
+.step-btn--fadeIn-dl-2 {
+  animation: fadeIn 0.5s ease-in-out 0.15s backwards;
+}
+.step-btn--fadeIn-dl-3 {
+  animation: fadeIn 0.5s ease-in-out 0.3s backwards;
 }
 .step-btn__number {
   width: 24px;
@@ -352,6 +401,17 @@ button {
 }
 .l-footer__list-item a:hover {
   text-decoration: underline;
+}
+
+.loading-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  z-index: 3;
 }
 
 .presentation {

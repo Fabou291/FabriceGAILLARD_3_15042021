@@ -1,9 +1,12 @@
-$widthCheck : 60px;
+$widthCheck : 30px;
+$paddingCheck-card : 14px 11px 12px 11px;
+
+$transitionTime : 0.3s;
 
 .check-card {
     position : relative;
     display : flex;
-    padding : 14px 11px 12px 11px;
+    padding : $paddingCheck-card;
     overflow : hidden;
 
 
@@ -14,20 +17,42 @@ $widthCheck : 60px;
     background-color: white;
     @include setBoxShadow;
 
-    &:not(:last-child) {
+    @include addFadeInDelayModifier($howMany : 4);
+
+    &:not(:last-child)  {
         margin-bottom : 14px;
+    }
+
+    &:hover {
+        .check-card {
+            &__check {
+                width : $widthCheck*2;
+                transform : translateX($widthCheck*-1);
+            }
+            &__icon-check {
+                transform : rotate(360deg);
+            }
+            &__content {
+                width : calc(100% - #{$widthCheck*2} + #{nth($paddingCheck-card, 2)} );
+            }
+        }
     }
 
     &__content {
         display : flex;
         align-items: flex-end;
         width : 100%;
+        padding : 0 12px 0 0;
+
         line-height: 18px;
+
+        transition : width $transitionTime  ease-out;
 
         div {
             flex: 1;
             min-width: 0;            
         }
+
     }
 
     &__title {
@@ -61,10 +86,18 @@ $widthCheck : 60px;
 
 
         color : white;
-        line-height : 100%;
+        font-size : 20px;
+
 
         background-color: $tertiary;
-        /*transform: translateX($widthCheck);*/
+
+        transition : width $transitionTime, transform $transitionTime ease-out;
+        transform: translateX(0);
+    }
+
+    &__icon-check {
+        transition : transform $transitionTime 0.1s ease-out;
+        transform: rotate(90deg);
     }
 
     

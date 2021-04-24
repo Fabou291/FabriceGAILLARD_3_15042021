@@ -5,6 +5,7 @@
 
 @import "./base/resetMeyer";
 @import "./base/typography";
+@import "./base/animation";
 @import "./base/base";
 
 @import "./components/btn";
@@ -15,6 +16,7 @@
 @import "./components/form/locationForm";
 
 @import "./layouts/layout";
+@import "./layouts/loading-display";
 
 @import "./pages/home";
 @import "./pages/restaurant";

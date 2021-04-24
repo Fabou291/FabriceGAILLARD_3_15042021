@@ -33,7 +33,6 @@
 }
 
 
-
 @mixin setEllipsis{
     text-overflow: ellipsis;
     white-space : nowrap;
@@ -55,6 +54,17 @@
         }
     }
 }
+
+@mixin addFadeInDelayModifier($howMany : 1, $time : 0.5s, $delay : 0.15s) {
+
+    @for $i from 1 to ($howMany+1) {
+        &--fadeIn-dl-#{$i} {
+            animation : fadeIn $time ease-in-out #{ $delay * ($i - 1) }  backwards ;
+        }
+    }
+
+}
+
 
 /* -- home -- */
 @mixin setTitleHome($margin-bottom) {

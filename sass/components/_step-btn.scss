@@ -12,6 +12,8 @@
 
     @include robotoTypo('Medium');
 
+    @include addFadeInDelayModifier($howMany : 3);
+
 
     &__number {
         width : 24px;
