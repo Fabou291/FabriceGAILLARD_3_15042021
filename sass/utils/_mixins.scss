@@ -7,8 +7,18 @@
     font-family : $name, Arial, Helvetica, sans-serif;
 }
 
-@mixin setBoxShadow ($color : rgba(0,0,0,0.15)) {
-    box-shadow: 0 5px 10px $color;
+@mixin setBoxShadow ($color : rgba(0,0,0,0.3)) {
+    box-shadow: 0 3px 10px -3px $color;
+}
+
+@mixin box-shadow-6-layer( $alpha : (0.014, 0.035, 0.059, 0.084, 0.109, 0.13) ) {
+    box-shadow:
+    0 10.3px 17.4px -23px   rgba(0, 0, 0, nth($alpha, 1)),
+    0 15.8px 22.7px -23px   rgba(0, 0, 0, nth($alpha, 2)),
+    0 19.3px 24.7px -23px   rgba(0, 0, 0, nth($alpha, 3)),
+    0 21.7px 26.4px -23px   rgba(0, 0, 0, nth($alpha, 4)),
+    0 23.4px 31.4px -23px   rgba(0, 0, 0, nth($alpha, 5)),
+    0 27px 67px -23px       rgba(0, 0, 0, nth($alpha, 6));
 }
 
 @mixin setSize($width : auto, $height : auto){
@@ -65,6 +75,12 @@
 
 }
 
+
+@mixin setMediaScreen($screen) {
+    @media screen and (min-width : map-get($min-breakpoints, $screen)) {
+        @content;
+    }
+}
 
 /* -- home -- */
 @mixin setTitleHome($margin-bottom) {

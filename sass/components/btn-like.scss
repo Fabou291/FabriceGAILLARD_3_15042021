@@ -1,0 +1,32 @@
+$heart-bg : rgb(241, 33, 78);
+.btn-like {
+    position : relative;
+    cursor : pointer;
+    width : 23px;
+
+    &__stroke {
+        position : relative;
+        z-index : 1;
+
+    }
+
+    &__fill {
+        position : absolute;
+        top : 0;
+        left : 0;
+
+        fill : $heart-bg;
+
+        transform: scale(0);
+        transition: transform ease-out 0.3s;
+    }
+
+    &:hover{
+        .btn-like {
+            &__fill { 
+                transform: scale(0.9);
+            }
+        }
+    }
+
+}

@@ -1,16 +1,21 @@
 .card {
     display : block;
     position :relative;
+    flex-basis : 100%;
     
     overflow : hidden;
 
     background-color: white;
-    @include setBoxShadow;
+
 
     border-radius: 15px;
 
-    &:not(:last-child){
-        margin : 0 0 18px 0;
+
+
+    @include box-shadow-6-layer;
+
+    &:hover {
+        @include box-shadow-6-layer( (0.034, 0.055, 0.079, 0.104, 0.129, 0.33) )
     }
 
     &__tag {
@@ -48,4 +53,6 @@
         padding : 3px;
         margin-left : auto;
     }
+
+
 }

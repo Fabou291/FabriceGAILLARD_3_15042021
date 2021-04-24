@@ -1,6 +1,6 @@
 $thumb : (
     height : 255px,
-    top : $heightHeader + nth($marginHeader,1)
+    top : $heightHeader + nth($paddingHeader,1)
 );
 
 $menuPaddingTop : 38px;

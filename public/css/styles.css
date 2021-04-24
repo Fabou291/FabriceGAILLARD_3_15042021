@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* -- Colors -- */
-/* -- Fonts -- */
 /* -- global -- */
 /* -- home -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -107,10 +106,7 @@ a, input {
   text-decoration: none;
   color: inherit;
 }
-a:hover, input:hover {
-  color: inherit;
-}
-a:visited, input:visited {
+a:hover, a:visited, input:hover, input:visited {
   color: inherit;
 }
 
@@ -118,33 +114,63 @@ button {
   border: none;
 }
 
-.btn {
+.svg-defs {
+  display: none;
+}
+
+.btn-default {
   display: inline-block;
-  padding: 17.5px 22px;
   min-width: 186px;
+  padding: 17.5px 22px;
+  height: 100%;
   border-radius: 100px;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.4);
   font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
   user-select: none;
 }
-.btn a {
-  width: 100%;
-  height: 100%;
+.btn-default:hover {
+  background: linear-gradient(350deg, #965add 0%, #ff93e1 100%);
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.btn-default:hover, .btn-default:visited {
+  color: white;
+}
+
+.btn-like {
+  position: relative;
+  cursor: pointer;
+  width: 23px;
+}
+.btn-like__stroke {
+  position: relative;
+  z-index: 1;
+}
+.btn-like__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #f1214e;
+  transform: scale(0);
+  transition: transform ease-out 0.3s;
+}
+.btn-like:hover .btn-like__fill {
+  transform: scale(0.9);
 }
 
 .card {
   display: block;
   position: relative;
+  flex-basis: 100%;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
+  box-shadow: 0 10.3px 17.4px -23px rgba(0, 0, 0, 0.014), 0 15.8px 22.7px -23px rgba(0, 0, 0, 0.035), 0 19.3px 24.7px -23px rgba(0, 0, 0, 0.059), 0 21.7px 26.4px -23px rgba(0, 0, 0, 0.084), 0 23.4px 31.4px -23px rgba(0, 0, 0, 0.109), 0 27px 67px -23px rgba(0, 0, 0, 0.13);
 }
-.card:not(:last-child) {
-  margin: 0 0 18px 0;
+.card:hover {
+  box-shadow: 0 10.3px 17.4px -23px rgba(0, 0, 0, 0.034), 0 15.8px 22.7px -23px rgba(0, 0, 0, 0.055), 0 19.3px 24.7px -23px rgba(0, 0, 0, 0.079), 0 21.7px 26.4px -23px rgba(0, 0, 0, 0.104), 0 23.4px 31.4px -23px rgba(0, 0, 0, 0.129), 0 27px 67px -23px rgba(0, 0, 0, 0.33);
 }
 .card__tag {
   position: absolute;
@@ -184,7 +210,7 @@ button {
   overflow: hidden;
   border-radius: 15px;
   background-color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
 }
 .check-card--fadeIn-dl-1 {
   animation: fadeIn 0.5s ease-in-out 0s backwards;
@@ -269,7 +295,7 @@ button {
   align-items: center;
   height: 71px;
   padding: 0 34px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.2);
   background-color: #f6f6f6;
   border-radius: 20px;
   font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
@@ -282,6 +308,10 @@ button {
 }
 .step-btn--fadeIn-dl-3 {
   animation: fadeIn 0.5s ease-in-out 0.3s backwards;
+}
+.step-btn:hover {
+  background-color: #f5edff;
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.35);
 }
 .step-btn__number {
   width: 24px;
@@ -313,6 +343,7 @@ button {
 }
 
 .locationForm {
+  width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) inset;
   background-color: #eaeaea;
   color: #353535;
@@ -340,17 +371,27 @@ button {
   outline: none;
 }
 
+.l-content {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 426px) {
+  .l-content {
+    padding: 0 50px;
+  }
+}
+
 .l-header {
   position: relative;
   height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 11px 0 0 0;
+  padding: 11px 0 0 0;
 }
 .l-header__logo {
   width: 164px;
-  border: 1px solid red;
 }
 .l-header__return-btn {
   position: absolute;
@@ -358,7 +399,6 @@ button {
   left: 0;
   padding: 0 23px;
   height: 100%;
-  border: 1px solid red;
   font-size: 20px;
 }
 .l-header__return-btn--visible {
@@ -372,10 +412,10 @@ button {
 }
 
 .l-footer {
+  padding: 56px 0;
   min-height: 197px;
   background-color: #353535;
   color: white;
-  padding: 25px;
 }
 .l-footer__logo {
   width: 99px;
@@ -415,7 +455,7 @@ button {
 }
 
 .presentation {
-  padding: 39px 20px 56px 20px;
+  padding: 39px 0 56px 0;
   background-color: #f6f6f6;
   text-align: center;
 }
@@ -433,7 +473,7 @@ button {
 }
 
 .operation {
-  padding: 56px 20px;
+  padding: 56px 0;
 }
 .operation h2 {
   margin-bottom: 34px;
@@ -441,7 +481,21 @@ button {
   font-size: 24px;
 }
 .operation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0 12px;
+  width: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .operation__list {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .operation__list-item {
+    flex-basis: calc( (100/3) * 1% - 20px );
+  }
 }
 .operation__list-item:not(:last-child) {
   margin: 0 0 24px 0;
@@ -449,12 +503,46 @@ button {
 
 .restaurant {
   background-color: #f6f6f6;
-  padding: 56px 20px;
+  padding: 56px 0;
+}
+.restaurant .card:not(:last-child) {
+  margin: 0 0 18px 0;
+}
+@media screen and (min-width: 769px) {
+  .restaurant .card:not(:last-child) {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 426px) {
+  .restaurant .card:not(:last-child) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .restaurant .card {
+    flex-basis: calc(50% - 15px);
+  }
+  .restaurant .card:not(:last-child) {
+    margin: 0;
+  }
+  .restaurant .card:not(:nth-last-child(-n+2)) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurant .card__thumb {
+    height: 250px;
+  }
 }
 .restaurant h2 {
   margin-bottom: 34px;
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
   font-size: 24px;
+}
+.restaurant__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .restau__thumb {

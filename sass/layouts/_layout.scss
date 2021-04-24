@@ -1,15 +1,28 @@
+$max-width : 1440px;
+
 $heightHeader : 52px;
-$marginHeader : 11px 0 0 0;
+$paddingHeader : 11px 0 0 0;
+
+.l-content {
+    max-width: 1440px;
+    margin : auto;
+    padding : 0 20px;
+
+    @include setMediaScreen(tablette) {
+        padding : 0 50px;
+    }
+
+}
 
 .l-header {
     position : relative;
     height : $heightHeader;
     @include setFlexCenterCenter;
-    margin : $marginHeader;
+    padding : $paddingHeader;
     
     &__logo {
         width : 164px;
-        border : 1px solid red;
+
     }
 
     &__return-btn {
@@ -19,7 +32,7 @@ $marginHeader : 11px 0 0 0;
         padding : 0 23px;
         height: 100%;
 
-        border : 1px solid red;
+
 
         font-size : 20px;
 
@@ -36,11 +49,13 @@ $marginHeader : 11px 0 0 0;
 }
 
 .l-footer {
+    padding : 56px 0;
     min-height : 197px;
     background-color : $fourth;
     color : white;
-    padding : 25px;
     
+
+
     &__logo {
         width : 99px;
         display: block;

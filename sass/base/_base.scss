@@ -16,12 +16,10 @@ body {
 a, input {
     text-decoration: none;
     color : inherit;
-    &:hover{
+    &:hover, &:visited{
         color : inherit;
     }
-    &:visited{
-        color : inherit;
-    }
+
 }
 
 button { 

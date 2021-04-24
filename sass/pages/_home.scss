@@ -1,15 +1,14 @@
-$padding-section : 56px 20px;
-
-
 
 
 
 
 
 .presentation {
-    padding : 39px 20px 56px 20px;
+    padding : 39px 0 56px 0;
     background-color: $fifth;
     text-align : center;
+
+ 
 
     h1 {
         @include setTitleHome($margin-bottom : 12px);
@@ -27,28 +26,87 @@ $padding-section : 56px 20px;
 }
 
 .operation {
-    padding : $padding-section;
+    padding : 56px 0;
     
+
+
     h2 {
         @include setTitleHome($margin-bottom : 34px);
     }
 
     &__list {
+        display : flex;
+        flex-direction : column;
+        justify-content: space-between;
         padding : 0 12px;
+        width : 100%;
+        @include setMediaScreen(desktop) {
+            flex-direction : row;
+        }
+    }
+
+    &__list-item {
+        @include setMediaScreen(desktop) {
+            flex-basis : calc( (100/3) * 1% - 20px );
+            
+        }
     }
 
     &__list-item:not(:last-child) {
         margin : 0 0 24px 0
     }
+
+
+
 }
 
 .restaurant {
+    background-color: $fifth;
+    padding : 56px 0;
+
+    .card {
+        &:not(:last-child) {
+            margin : 0 0 18px 0;
+            @include setMediaScreen(laptop) {
+                margin : 0;
+            }
+        }
+        
+        @include setMediaScreen(tablette) {
+            &:not(:last-child) {
+                margin : 0 0 30px 0;
+            }
+        }
+
+        @include setMediaScreen(laptop) {
+            flex-basis : calc(50% - 15px);
+
+            &:not(:last-child) {
+                margin : 0;
+            }
+            &:not(:nth-last-child(-n+2)) { 
+                margin : 0 0 30px 0;
+            }  
+        }
+    
+        @include setMediaScreen(desktop) {
+            &__thumb { 
+                height : 250px;
+            }
+        }
+    }
 
     h2 { 
         @include setTitleHome($margin-bottom : 34px);
     }
 
-    background-color: #f6f6f6;
-    padding : $padding-section;
+    &__card {
+        display : flex;
+        flex-wrap : wrap;
+        justify-content: space-between;
+    }
+
 }
+
+
 

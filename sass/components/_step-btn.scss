@@ -5,7 +5,7 @@
     height : 71px;
     padding : 0 34px;
 
-    @include setBoxShadow;
+    @include setBoxShadow(rgba(0,0,0,0.2));
     background-color: $fifth;
 
     border-radius : 20px;
@@ -13,6 +13,13 @@
     @include robotoTypo('Medium');
 
     @include addFadeInDelayModifier($howMany : 3);
+
+
+
+    &:hover {
+        background-color : $sixth;
+        @include setBoxShadow(rgba(0,0,0,0.35));
+    }
 
 
     &__number {
