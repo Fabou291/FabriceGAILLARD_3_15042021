@@ -1,0 +1,36 @@
+$header_height : 52px;
+$__return-btn_shift_top : 6px;
+
+.header {
+
+    .relative-container {
+        height : $header_height;
+        padding : 6px 0 0 0;
+        @include setFlexCenterCenter;
+    }
+
+    &__logo {
+        padding : 5px 0 0 0; 
+        width : 164px;
+    }
+
+    &__return-btn {
+        position : absolute;
+        display : none !important;
+        
+        left : 0;
+        top : $__return-btn_shift_top * -1;
+        bottom : 0;
+        padding : 0 23px;
+
+        font-size : 20px;
+
+        &::before {
+            padding-top : $__return-btn_shift_top;
+        }
+
+        &--visible {
+            @include setFlexCenterCenter($isImportant : true);
+        }
+    }
+}

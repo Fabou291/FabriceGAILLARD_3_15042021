@@ -1,0 +1,111 @@
+$__thumb_height : (
+    mobile : 255px,
+    laptop : 350px,
+    desktop : 500px,
+);
+
+$menuPaddingTop : 38px;
+
+.menu-restaurant {
+    position : relative;
+    padding-top : map_get($__thumb_height, mobile) - $header_height;
+
+    
+    &__thumb {
+        position : absolute;
+        top : 0;
+        z-index: -1;
+        @include objectFitCoverCenterCenter (map_get($__thumb_height, mobile));
+
+        @include setMediaScreen(laptop) {
+            height : map_get($__thumb_height, laptop);
+        }
+
+        @include setMediaScreen(desktop) {
+            height : map_get($__thumb_height, desktop);
+        }
+    }
+
+    &__content {
+        padding : 38px  14px;
+        border-radius : 40px 40px 0 0;
+        background-color : $fifth;  
+        
+        @include setMediaScreen(laptop) { 
+            padding : 48px  40px;
+        }
+    }
+
+    &__header {
+        display : flex;
+        align-items : center;
+        margin : 0 5px 31px 5px;
+    }
+
+    &__title {
+        @include typography('shrikhand');
+        color  : $secondary-font;
+        font-size : 28px;
+    }
+
+    &__like {
+        margin : 0 0 0 auto;
+    }
+
+    &__main {
+        display : flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__footer {
+        @include setFlexCenterCenter;
+        margin : 50px 0;
+    }
+
+    @include setMediaScreen(laptop) {
+        padding-top : map_get($__thumb_height, laptop) - $header_height;
+    }
+
+    @include setMediaScreen(desktop) {
+        padding-top : map_get($__thumb_height, desktop) - $header_height;
+    }
+
+}
+
+.starter {
+    @include setMediaScreen(desktop) {
+
+        .check-card {
+            $pad : 20px;
+
+            flex-basis : calc((100/3)*1% - 20px);
+            padding : $pad 0 $pad $pad;
+
+            &__price {
+                padding : 0 $pad 0 0;
+            }
+
+            &:not(:last-child)  {
+                margin-bottom : 0px;
+            }
+
+        }
+        
+    }
+}
+
+.main-course, .dessert { 
+
+    @include setMediaScreen(laptop) {
+        
+        width : calc(50% - 15px);
+
+
+        .check-card {
+            flex-basis : 100%;
+            margin-bottom : 30px !important;
+        }
+    }
+
+}

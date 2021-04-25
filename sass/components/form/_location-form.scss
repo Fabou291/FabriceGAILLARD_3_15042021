@@ -1,15 +1,13 @@
-.locationForm {
-    width : 100%;
-
+.location-form {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1) inset;
     background-color : #eaeaea;
-    
     color : $fourth;
 
+    .default-container {
+        @include setFlexCenterCenter;
+    }
+
     label {
-        display : flex;
-        align-items: center;
-        justify-content: center;
         width : 100%;
         cursor : text;
     }

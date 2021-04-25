@@ -6,6 +6,7 @@ $transitionTime : 0.3s;
 .check-card {
     position : relative;
     display : flex;
+    align-items: center;
     padding : $paddingCheck-card;
     overflow : hidden;
 
@@ -19,11 +20,8 @@ $transitionTime : 0.3s;
 
     @include addFadeInDelayModifier($howMany : 4);
 
-    &:not(:last-child)  {
-        margin-bottom : 14px;
-    }
 
-    &:hover {
+    &:active, &:focus {
         .check-card {
             &__check {
                 width : $widthCheck*2;
@@ -36,6 +34,10 @@ $transitionTime : 0.3s;
                 width : calc(100% - #{$widthCheck*2} + #{nth($paddingCheck-card, 2)} );
             }
         }
+    }
+
+    &:hover {
+        @include setBoxShadow(rgba(0,0,0,0.5));
     }
 
     &__content {

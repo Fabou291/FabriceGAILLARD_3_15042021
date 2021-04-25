@@ -1,60 +1,9 @@
-$max-width : 1440px;
-
-$heightHeader : 52px;
-$paddingHeader : 11px 0 0 0;
-
-.l-content {
-    max-width: 1440px;
-    margin : auto;
-    padding : 0 20px;
-
-    @include setMediaScreen(tablette) {
-        padding : 0 50px;
-    }
-
-}
-
-.l-header {
-    position : relative;
-    height : $heightHeader;
-    @include setFlexCenterCenter;
-    padding : $paddingHeader;
-    
-    &__logo {
-        width : 164px;
-
-    }
-
-    &__return-btn {
-        position : absolute;
-        display : none !important;
-        left : 0;
-        padding : 0 23px;
-        height: 100%;
-
-
-
-        font-size : 20px;
-
-        &--visible {
-            @include setFlexCenterCenter($isImportant : true);
-        }
-    }
-}
-
-
-
-.l-main {
-    flex : 1;
-}
-
-.l-footer {
+.footer {
     padding : 56px 0;
     min-height : 197px;
     background-color : $fourth;
     color : white;
     
-
 
     &__logo {
         width : 99px;
@@ -91,5 +40,3 @@ $paddingHeader : 11px 0 0 0;
     }
 
 }
-
-

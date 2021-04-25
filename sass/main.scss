@@ -11,14 +11,20 @@
 
 @import "./components/btn/default-btn";
 @import "./components/btn/like-btn";
-@import "./components/btn/step-btn";
-@import "./components/card/default-card";
 @import "./components/card/check-card";
+@import "./components/card/default-card";
+@import "./components/btn/step-btn";
+@import "./components/form/location-form";
+@import "./components/menu-section";
 @import "./components/tag";
-@import "./components/form/locationForm";
 
-@import "./layouts/layout";
+
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+@import "./layouts/container/default-container";
+@import "./layouts/container/relative-container";
 @import "./layouts/loading-display";
 
-@import "./pages/home";
-@import "./pages/restaurant";
+@import "./pages/index";
+@import "./pages/menu-restaurant";

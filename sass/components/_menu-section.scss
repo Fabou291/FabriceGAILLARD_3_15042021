@@ -1,0 +1,53 @@
+.menu-section {
+
+    width : 100%;
+
+    &__title {
+        width : 40px;
+        padding : 7px 0;
+        margin-bottom : 14px;
+    
+        font-size: 15.5px;
+        white-space: nowrap;
+    
+        border-bottom: 3px solid $tertiary;
+    }
+
+
+    .check-card {
+        &:not(:last-child)  {
+            margin-bottom : 14px;
+        }
+    }
+
+    
+    &:not(:last-child) {
+        margin : 0 0 35px 0;
+    }
+
+    @include setMediaScreen(desktop) {
+        &__cards {
+            display : flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .check-card {
+            $pad : 20px;
+
+            flex-basis : calc((100/3)*1% - 20px);
+            padding : $pad 0 $pad $pad;
+
+            &__price {
+                padding : 0 $pad 0 0;
+            }
+
+            &:not(:last-child)  {
+                margin-bottom : 0px;
+            }
+
+        }
+        
+    }
+
+}

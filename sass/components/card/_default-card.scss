@@ -41,6 +41,11 @@
         @include robotoTypo('Bold');
         font-size : 18px;
         margin : 0 0 7px 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
     }
 
     p {

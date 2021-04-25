@@ -1,6 +1,18 @@
+.index {
+    .default-container {
+        padding : 0 20px;
+        @include setMediaScreen(laptop) {
+            padding : 0 50px;
+        }
+    }
 
+    h2 {
+        @include robotoTypo('Bold');
+        font-size : 24px;
+        margin-bottom : 34px;
+    }
 
-
+}
 
 
 .presentation {
@@ -8,11 +20,10 @@
     background-color: $fifth;
     text-align : center;
 
- 
-
     h1 {
-        @include setTitleHome($margin-bottom : 12px);
-
+        @include robotoTypo('Bold');
+        margin-bottom : 12px;
+        font-size : 24px;
         padding : 0 30px;
 
         line-height : 28px;
@@ -30,9 +41,6 @@
     
 
 
-    h2 {
-        @include setTitleHome($margin-bottom : 34px);
-    }
 
     &__list {
         display : flex;
@@ -96,9 +104,6 @@
         }
     }
 
-    h2 { 
-        @include setTitleHome($margin-bottom : 34px);
-    }
 
     &__card {
         display : flex;

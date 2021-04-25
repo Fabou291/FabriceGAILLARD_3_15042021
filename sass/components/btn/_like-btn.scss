@@ -1,4 +1,5 @@
-$heart-bg : rgb(241, 33, 78);
+$heart-hover-bg : lighten(grey,20%);
+$heart-active-bg : rgb(241, 33, 78);
 
 .like-btn {
 
@@ -8,24 +9,51 @@ $heart-bg : rgb(241, 33, 78);
 
     &__stroke {
         position : relative;
-        z-index : 1;
+        z-index : 2;
 
     }
 
     &__fill {
         position : absolute;
+        /* opacity : 0;  Uniquement là pour éviter de voir le coeur rouge au chargement de la page */
         top : 0;
         left : 0;
 
-        fill : $heart-bg;
+
 
         transform: scale(0);
-        transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s ;
+
+        &--default {
+            fill : black;
+        }
+
+        &--active {
+            z-index : 1;
+            fill : $heart-active-bg;
+        }
+
     }
 
-    &:hover{
+    &:hover {
+
         .like-btn {
-            &__fill { 
+
+            &__fill--default { 
+                transform: scale(0.9);
+            }
+
+            &__stroke { 
+                fill : $heart-active-bg;
+            }
+
+        }
+
+    }
+
+    &:active, &:focus{
+        .like-btn {
+            &__fill--active { 
                 transform: scale(0.9);
             }
         }
