@@ -7,13 +7,13 @@
 @import "./base/typography";
 @import "./base/animation";
 @import "./base/base";
+@import "./base/svg-defs";
 
-@import "./components/svg-defs";
-@import "./components/btn";
-@import "./components/btn-like";
-@import "./components/card";
-@import "./components/check-card";
-@import "./components/step-btn";
+@import "./components/btn/default-btn";
+@import "./components/btn/like-btn";
+@import "./components/btn/step-btn";
+@import "./components/card/default-card";
+@import "./components/card/check-card";
 @import "./components/tag";
 @import "./components/form/locationForm";
 

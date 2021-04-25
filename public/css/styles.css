@@ -118,7 +118,7 @@ button {
   display: none;
 }
 
-.btn-default {
+.default-btn {
   display: inline-block;
   min-width: 186px;
   padding: 17.5px 22px;
@@ -131,24 +131,24 @@ button {
   text-align: center;
   user-select: none;
 }
-.btn-default:hover {
+.default-btn:hover {
   background: linear-gradient(350deg, #965add 0%, #ff93e1 100%);
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.7);
 }
-.btn-default:hover, .btn-default:visited {
+.default-btn:hover, .default-btn:visited {
   color: white;
 }
 
-.btn-like {
+.like-btn {
   position: relative;
   cursor: pointer;
   width: 23px;
 }
-.btn-like__stroke {
+.like-btn__stroke {
   position: relative;
   z-index: 1;
 }
-.btn-like__fill {
+.like-btn__fill {
   position: absolute;
   top: 0;
   left: 0;
@@ -156,11 +156,53 @@ button {
   transform: scale(0);
   transition: transform ease-out 0.3s;
 }
-.btn-like:hover .btn-like__fill {
+.like-btn:hover .like-btn__fill {
   transform: scale(0.9);
 }
 
-.card {
+.step-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 71px;
+  padding: 0 34px;
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.2);
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
+}
+.step-btn--fadeIn-dl-1 {
+  animation: fadeIn 0.5s ease-in-out 0s backwards;
+}
+.step-btn--fadeIn-dl-2 {
+  animation: fadeIn 0.5s ease-in-out 0.15s backwards;
+}
+.step-btn--fadeIn-dl-3 {
+  animation: fadeIn 0.5s ease-in-out 0.3s backwards;
+}
+.step-btn:hover {
+  background-color: #f5edff;
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.35);
+}
+.step-btn__number {
+  width: 24px;
+  position: absolute;
+  left: -12px;
+  background-color: #9356DC;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+.step-btn__icon {
+  font-size: 20px;
+  width: 40px;
+  color: #7e7e7e;
+}
+
+.default-card {
   display: block;
   position: relative;
   flex-basis: 100%;
@@ -169,34 +211,34 @@ button {
   border-radius: 15px;
   box-shadow: 0 10.3px 17.4px -23px rgba(0, 0, 0, 0.014), 0 15.8px 22.7px -23px rgba(0, 0, 0, 0.035), 0 19.3px 24.7px -23px rgba(0, 0, 0, 0.059), 0 21.7px 26.4px -23px rgba(0, 0, 0, 0.084), 0 23.4px 31.4px -23px rgba(0, 0, 0, 0.109), 0 27px 67px -23px rgba(0, 0, 0, 0.13);
 }
-.card:hover {
+.default-card:hover {
   box-shadow: 0 10.3px 17.4px -23px rgba(0, 0, 0, 0.034), 0 15.8px 22.7px -23px rgba(0, 0, 0, 0.055), 0 19.3px 24.7px -23px rgba(0, 0, 0, 0.079), 0 21.7px 26.4px -23px rgba(0, 0, 0, 0.104), 0 23.4px 31.4px -23px rgba(0, 0, 0, 0.129), 0 27px 67px -23px rgba(0, 0, 0, 0.33);
 }
-.card__tag {
+.default-card__tag {
   position: absolute;
   top: 12px;
   right: 12px;
 }
-.card__thumb {
+.default-card__thumb {
   height: 174px;
   width: 100%;
   object-fit: cover;
   object-position: center center;
 }
-.card__caption {
+.default-card__caption {
   display: flex;
   align-items: flex-star;
   padding: 15px 12px;
 }
-.card__title {
+.default-card__title {
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
   font-size: 18px;
   margin: 0 0 7px 0;
 }
-.card p {
+.default-card p {
   font-size: 17px;
 }
-.card__like {
+.default-card__like {
   font-size: 23px;
   margin: 0 9px 0 0;
   padding: 3px;
@@ -287,48 +329,6 @@ button {
 .check-card__icon-check {
   transition: transform 0.3s 0.1s ease-out;
   transform: rotate(90deg);
-}
-
-.step-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 71px;
-  padding: 0 34px;
-  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.2);
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  font-family: "Roboto-Medium", Arial, Helvetica, sans-serif;
-}
-.step-btn--fadeIn-dl-1 {
-  animation: fadeIn 0.5s ease-in-out 0s backwards;
-}
-.step-btn--fadeIn-dl-2 {
-  animation: fadeIn 0.5s ease-in-out 0.15s backwards;
-}
-.step-btn--fadeIn-dl-3 {
-  animation: fadeIn 0.5s ease-in-out 0.3s backwards;
-}
-.step-btn:hover {
-  background-color: #f5edff;
-  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.35);
-}
-.step-btn__number {
-  width: 24px;
-  position: absolute;
-  left: -12px;
-  background-color: #9356DC;
-  border-radius: 30px;
-  color: white;
-  text-align: center;
-  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-}
-.step-btn__icon {
-  font-size: 20px;
-  width: 40px;
-  color: #7e7e7e;
 }
 
 .tag {
@@ -505,32 +505,32 @@ button {
   background-color: #f6f6f6;
   padding: 56px 0;
 }
-.restaurant .card:not(:last-child) {
+.restaurant .default-card:not(:last-child) {
   margin: 0 0 18px 0;
 }
 @media screen and (min-width: 769px) {
-  .restaurant .card:not(:last-child) {
+  .restaurant .default-card:not(:last-child) {
     margin: 0;
   }
 }
 @media screen and (min-width: 426px) {
-  .restaurant .card:not(:last-child) {
+  .restaurant .default-card:not(:last-child) {
     margin: 0 0 30px 0;
   }
 }
 @media screen and (min-width: 769px) {
-  .restaurant .card {
+  .restaurant .default-card {
     flex-basis: calc(50% - 15px);
   }
-  .restaurant .card:not(:last-child) {
+  .restaurant .default-card:not(:last-child) {
     margin: 0;
   }
-  .restaurant .card:not(:nth-last-child(-n+2)) {
+  .restaurant .default-card:not(:nth-last-child(-n+2)) {
     margin: 0 0 30px 0;
   }
 }
 @media screen and (min-width: 1025px) {
-  .restaurant .card__thumb {
+  .restaurant .default-card__thumb {
     height: 250px;
   }
 }
@@ -571,7 +571,6 @@ button {
   font-size: 28px;
 }
 .restau__like {
-  font-size: 23px;
   margin: 0 0 0 auto;
 }
 .restau__btn {

@@ -1,5 +1,7 @@
 $heart-bg : rgb(241, 33, 78);
-.btn-like {
+
+.like-btn {
+
     position : relative;
     cursor : pointer;
     width : 23px;
@@ -22,7 +24,7 @@ $heart-bg : rgb(241, 33, 78);
     }
 
     &:hover{
-        .btn-like {
+        .like-btn {
             &__fill { 
                 transform: scale(0.9);
             }

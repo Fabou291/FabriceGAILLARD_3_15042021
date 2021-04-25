@@ -64,7 +64,7 @@
     background-color: $fifth;
     padding : 56px 0;
 
-    .card {
+    .default-card {
         &:not(:last-child) {
             margin : 0 0 18px 0;
             @include setMediaScreen(laptop) {
