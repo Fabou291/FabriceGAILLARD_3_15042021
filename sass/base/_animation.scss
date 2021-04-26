@@ -8,3 +8,47 @@
         transform : translateY(0);
     }
 }
+
+
+@keyframes pushed-ball-y {
+    0% {
+        animation-timing-function : cubic-bezier(0,.01,.13,1);        
+    }
+    25% {
+        transform: translateY(-152%);
+        animation-timing-function :  cubic-bezier(.63,.01,.76,1);
+        
+    }
+    58% {
+        transform: translateY(0);
+        animation-timing-function :  cubic-bezier(0,0,.24,.99);
+    }
+    79% {
+        transform: translateY(13%);
+        animation-timing-function : ease-in-out;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pushed-ball-x {
+
+    0% {
+        animation-timing-function : cubic-bezier(.49,0,.74,1);        
+    }
+    25% {
+        transform: translateX(80%);
+        animation-timing-function :  cubic-bezier(.1,0,.62,.99);
+    }
+    58%, 100% {
+        transform: translateX(174%);
+    }
+}
+
+@keyframes static {
+    to,from {
+        transform : translateX(174%);
+    }
+
+}

@@ -1,16 +1,18 @@
 $heart-hover-bg : lighten(grey,20%);
-$heart-active-bg : rgb(241, 33, 78);
+$heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
 
 .like-btn {
 
     position : relative;
     cursor : pointer;
-    width : 23px;
+    font-family: "heart";
 
     &__stroke {
         position : relative;
         z-index : 2;
-
+        &::before {
+            content : "\e901";
+        }
     }
 
     &__fill {
@@ -19,18 +21,26 @@ $heart-active-bg : rgb(241, 33, 78);
         top : 0;
         left : 0;
 
-
-
         transform: scale(0);
         transition: transform ease-out 0.3s ;
 
+
+        &::before {
+            content : "\e900";
+        }
+
         &--default {
-            fill : black;
+            color : lighten(grey, 20%);
         }
 
         &--active {
             z-index : 1;
-            fill : $heart-active-bg;
+
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-image : $heart-active-bg;
         }
 
     }
@@ -44,7 +54,7 @@ $heart-active-bg : rgb(241, 33, 78);
             }
 
             &__stroke { 
-                fill : $heart-active-bg;
+                color : $heart-active-bg;
             }
 
         }
@@ -53,6 +63,9 @@ $heart-active-bg : rgb(241, 33, 78);
 
     &:active, &:focus{
         .like-btn {
+            &__stroke {
+                color : darken($primary,50%);
+            }
             &__fill--active { 
                 transform: scale(0.9);
             }

@@ -6,6 +6,11 @@
     src: url("../fonts/Shrikhand-Regular.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: "heart";
+    src : url("../fonts/heart/heart.ttf") format('truetype');
+}
+
 @include setRobotoFonts;
 
 

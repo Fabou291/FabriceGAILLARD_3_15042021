@@ -1,0 +1,48 @@
+$__ball_diameter : 60px;
+$spacing : $__ball_diameter * 0.75;
+
+.ball {
+
+    &__container {
+        width : $__ball_diameter;
+        height : $__ball_diameter; 
+
+
+        transform : translateX(0);
+        animation : pushed-ball-x 1s, static 0s 1s forwards;
+    }
+
+    &__subject {
+        width : 100%;
+        height : 100%;
+
+        border-radius : $__ball_diameter;
+
+        background-color : grey;
+
+        transform : translateY(0);
+        /*animation : pushed-ball-y 1s ;*/
+
+        &--blue {
+            background-color: #0157e7;
+        }
+
+        &--red {
+            background-color: #d62d20;
+        }
+
+        &--yellow {
+            background-color: #ffa700;
+        }
+
+        &--cyan {
+            background-color: #33b5e6
+        }
+
+        &--green {
+            background-color: #018845;
+        }        
+    }
+
+}
+

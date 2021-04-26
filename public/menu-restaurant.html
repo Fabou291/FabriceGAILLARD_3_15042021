@@ -17,17 +17,6 @@
 
 </head>
 <body>
-    <!-- svg-defs -->
-    <svg class="svg-defs">
-        <defs>
-            <g id="stroked_heart">
-                <path d="M547.931,38.635C478.842-19.457,372.101-10.732,306,56.564c-66.101-67.296-172.842-76.141-241.931-17.93 c-89.887,75.663-76.739,199.02-12.67,264.403L261.056,516.64c11.953,12.192,27.97,19.005,44.944,19.005 c17.093,0,32.991-6.694,44.944-18.886l209.658-213.602C624.551,237.774,637.938,114.418,547.931,38.635z M519.722,262.756 L310.064,476.358c-2.869,2.869-5.259,2.869-8.128,0L92.278,262.756C48.649,218.29,39.804,134.14,101.004,82.622 c46.498-39.087,118.216-33.23,163.16,12.551L306,137.846l41.836-42.673c45.183-46.02,116.902-51.637,163.16-12.67 C572.076,134.021,562.992,218.649,519.722,262.756L519.722,262.756z"/>      
-            </g>
-            <g id="stroked_filled">
-                <path d="M547.931,38.635C478.842-19.457,372.101-10.732,306,56.564c-66.101-67.296-172.842-76.141-241.931-17.93 c-89.887,75.663-76.739,199.02-12.67,264.403L261.056,516.64c11.953,12.192,27.97,19.005,44.944,19.005 c17.093,0,32.991-6.694,44.944-18.886l209.658-213.602C624.551,237.774,637.938,114.418,547.931,38.635z"/>
-            </g>
-        </defs>
-    </svg>
 
     <!-- header -->
         <header class="header">
@@ -55,15 +44,9 @@
                         <h1 class="menu-restaurant__title" >A la française</h1>
                         <div class="menu-restaurant__like">
                             <div class="like-btn" tabindex="0">
-                                <svg class="like-btn__stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 535.646" >
-                                    <use x="0" y="0" href="#stroked_heart" />
-                                </svg>
-                                <svg class="like-btn__fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 535.646">
-                                    <use x="0" y="0" href="#stroked_filled" />
-                                </svg>
-                                <svg class="like-btn__fill like-btn__fill--active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 535.646">
-                                    <use x="0" y="0" href="#stroked_filled" />
-                                </svg>
+                                <span class="like-btn__stroke"></span>
+                                <span class="like-btn__fill like-btn__fill--default"></span>
+                                <span class="like-btn__fill like-btn__fill--active"></span>
                             </div>
                         </div>
                     </header>
