@@ -82,6 +82,40 @@
     }
 }
 
+@mixin pushed-ball-y($way-y : 'positive') {
+
+    @if not ($way-y == 'positive' or $way-y ==  'negative'){
+        @error "La valeur $way-y doit être égale à 'positive' ou 'négative'";
+    }
+
+    $multiplicator-way: if($way-y == 'positive',1,-1);
+
+    
+
+    @keyframes #{pushed-ball-y- + $way-y} {
+        // valeur de base des % de l'anim : 0, 25, 58, 79, 100
+        0% {
+            animation-timing-function : cubic-bezier(0,.01,.13,1);        
+        }
+        12.5% {
+            transform: translateY( #{-152%*$multiplicator-way} );
+            animation-timing-function :  cubic-bezier(.63,.01,.76,1);
+            
+        }
+        29% {
+            transform: translateY( #{0*$multiplicator-way} );
+            animation-timing-function :  cubic-bezier(0,0,.24,.99);
+        }
+        39.5% {
+            transform: translateY( #{13%*$multiplicator-way} );
+            animation-timing-function : ease-in-out;
+        }
+        50%, 100% {
+            transform: translateY( #{0*$multiplicator-way} );
+        }
+    }
+}
+
 /* -- home -- */
 @mixin setTitleHome($margin-bottom) {
     margin-bottom : $margin-bottom;

@@ -1,47 +1,56 @@
-$__ball_diameter : 60px;
+$__ball_diameter : 20px;
 $spacing : $__ball_diameter * 0.75;
+$anim-duration : 2s;
+$decal : 0.4 * $anim-duration * -1  ;
+
+$length : 2;
+
+    //animation : static $anim-duration*4 steps(1,end) infinite;
+
+
+
 
 .ball {
 
-    &__container {
-        width : $__ball_diameter;
-        height : $__ball_diameter; 
+    width : $__ball_diameter;
+    height : $__ball_diameter; 
+    margin-right : ($__ball_diameter / 1px) * 0.73px;
 
 
-        transform : translateX(0);
-        animation : pushed-ball-x 1s, static 0s 1s forwards;
+
+    &__anim-x, &__anim-y, &__object {
+        width : inherit;
+        height : inherit;
     }
 
-    &__subject {
-        width : 100%;
-        height : 100%;
+    $color-balls : #0157e7, #d62d20, #ffa700, #33b5e6, #018845;
 
+    @for $i from 0 to 5 {
+        &--#{$i} {
+
+            transform : translateX(-174% * $i);
+
+            .ball {
+                &__object {
+                    background-color : nth($color-balls, $i+1);
+                }
+
+                &__anim-x {
+                    animation : pushed-ball-x $anim-duration*$length #{$i*$decal} infinite;
+                }
+            
+                &__anim-y {
+                    animation : pushed-ball-y $anim-duration*$length #{$i*$decal} infinite;
+                }                
+            }
+        }
+    }
+
+
+
+    &__object {
         border-radius : $__ball_diameter;
-
         background-color : grey;
-
-        transform : translateY(0);
-        /*animation : pushed-ball-y 1s ;*/
-
-        &--blue {
-            background-color: #0157e7;
-        }
-
-        &--red {
-            background-color: #d62d20;
-        }
-
-        &--yellow {
-            background-color: #ffa700;
-        }
-
-        &--cyan {
-            background-color: #33b5e6
-        }
-
-        &--green {
-            background-color: #018845;
-        }        
     }
 
 }
