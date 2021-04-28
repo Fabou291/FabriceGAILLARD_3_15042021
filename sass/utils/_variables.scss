@@ -6,14 +6,17 @@ $fourth : #353535;
 $fifth : #f6f6f6;
 $sixth : #f5edff;
 
-
 $primary-font   : black;
 $secondary-font : #101010;
 $tertiary-font  : #008766;
 
+/* -- Breakpoints -- */
 $min-breakpoints : (
     tablette    : 426px,
     laptop      : 769px,
     desktop     : 1025px
 );
+
+
+
 

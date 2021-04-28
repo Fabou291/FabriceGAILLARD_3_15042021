@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* -- Colors -- */
+/* -- Breakpoints -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -279,6 +280,7 @@ button {
   position: relative;
   cursor: pointer;
   font-family: "heart";
+  font-size: 23px;
 }
 .like-btn__stroke {
   position: relative;
@@ -448,7 +450,6 @@ button {
   font-size: 17px;
 }
 .default-card__like {
-  font-size: 23px;
   margin: 0 9px 0 0;
   padding: 3px;
   margin-left: auto;

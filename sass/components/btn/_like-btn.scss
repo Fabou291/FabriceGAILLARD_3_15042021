@@ -6,6 +6,7 @@ $heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
     position : relative;
     cursor : pointer;
     font-family: "heart";
+    font-size : 23px;
 
     &__stroke {
         position : relative;
