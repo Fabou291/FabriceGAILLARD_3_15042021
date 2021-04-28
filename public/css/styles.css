@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /* -- Colors -- */
-/* -- global -- */
-/* -- home -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -222,14 +220,6 @@ table {
     transform: translateY(0);
   }
 }
-/*@keyframes return-x {
-    0% {
-        transform : translateX(0);
-    }
-    100% {
-        transform : translateX($shift-x*-3);
-    }
-}*/
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -537,9 +527,9 @@ button {
 }
 
 .ball {
-  width: 20px;
-  height: 20px;
-  margin-right: 14.6px;
+  width: 30px;
+  height: 30px;
+  margin-right: 21.9px;
 }
 .ball__anim-x, .ball__anim-y, .ball__object {
   width: inherit;
@@ -606,7 +596,7 @@ button {
   animation: pushed-ball-y 4s -3.2s infinite;
 }
 .ball__object {
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: grey;
 }
 

@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/functions";
-@import "./utils/mixins";
+@import "./utils/mixins/general_mixins";
+@import "./utils/mixins/animation_mixins";
 @import "./utils/extensions";
 
 @import "./base/resetMeyer";

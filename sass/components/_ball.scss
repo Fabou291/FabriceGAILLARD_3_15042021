@@ -1,13 +1,9 @@
-$__ball_diameter : 20px;
+$__ball_diameter : 30px;
 $spacing : $__ball_diameter * 0.75;
 $anim-duration : 2s;
 $decal : 0.4 * $anim-duration * -1  ;
 
 $length : 2;
-
-    //animation : static $anim-duration*4 steps(1,end) infinite;
-
-
 
 
 .ball {
