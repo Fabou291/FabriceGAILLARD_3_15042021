@@ -2,11 +2,18 @@ $heart-hover-bg : lighten(grey,20%);
 $heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
 
 .like-btn {
-
+    padding : 0;
+    margin : 0;
     position : relative;
-    cursor : pointer;
+    
     font-family: "heart";
     font-size : 23px;
+
+    background: none;
+
+    cursor : pointer;
+
+    
 
     &__stroke {
         position : relative;
