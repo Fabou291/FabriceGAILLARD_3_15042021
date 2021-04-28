@@ -20,17 +20,17 @@ https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20c
 ## Technologies
 
 Le développement devra se faire en CSS, sans JavaScript.
-- Aucun framework ne devra être utilisé
-- Utiliser SASS
-- Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML
+✓ Aucun framework ne devra être utilisé
+✓ Utiliser SASS
+✓ Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML
 
 
 ## Compatibilité
 
-- Le site sera developpé en utilisant l'apporche mobile-first
-- L’ensemble du site devra être responsive sur mobile, tablette et desktop.
+✓ Le site sera developpé en utilisant l'apporche mobile-first
+✓ L’ensemble du site devra être responsive sur mobile, tablette et desktop.
 - Les pages devront passer la validation W3C en HTML et CSS sans erreur.
-- Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
+✓ Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
 
 ## Livrable attendus
@@ -53,7 +53,7 @@ Le développement devra se faire en CSS, sans JavaScript.
 
 ## Effets graphiques et animations
 
-- Les effets au clic et survol seront visible sur la maquette
+✓ Les effets au clic et survol seront visible sur la maquette
 ✓ Pas de javascript, uniquement CSS
 
 - Boutons :

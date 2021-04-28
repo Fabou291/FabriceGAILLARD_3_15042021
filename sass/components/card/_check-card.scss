@@ -20,6 +20,7 @@ $transitionTime : 0.3s;
 
     @include addFadeInDelayModifier($howMany : 4);
 
+    cursor : pointer;
 
     &:active, &:focus {
         .check-card {

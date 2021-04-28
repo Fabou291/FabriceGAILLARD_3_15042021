@@ -14,38 +14,58 @@ $way-y : ( 1, -1 );
         $j : 0;
 
         @for $i from 0 to $total_repetition {
-            
             $trucbidule : 100% / $total_repetition * $i;
-            
-            $prct : (
-                0%      : (0% / $prout) + $trucbidule,
-                25%     : (25% / $prout) + $trucbidule,
-                58%     : (58% / $prout) + $trucbidule,
-                100%    : (100% / $prout) + $trucbidule
-            );
+                $prct : (
+                    0%      : (0% / $prout) + $trucbidule,
+                    25%     : (25% / $prout) + $trucbidule,
+                    58%     : (58% / $prout) + $trucbidule,
+                    100%    : (100% / $prout) + $trucbidule
+                );     
 
-            #{ map_get($prct , 0%) } {
-                transform: translateX(0% + $j);
-                animation-timing-function : cubic-bezier(.49,0,.74,1);        
+            @if not ( $i == 3 ) {
+
+
+
+                #{ map_get($prct , 0%) } {
+                    transform: translateX(0% + $j);
+                    animation-timing-function : cubic-bezier(.49,0,.74,1);        
+                }
+                #{ map_get($prct , 25%) } {
+                    transform: translateX(80% + $j);
+                    animation-timing-function :  cubic-bezier(.1,0,.62,.99);
+                }
+                #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
+                    transform: translateX($shift-x + $j);
+                }                
+            } @else {
+
+                #{ map_get($prct , 0%) } {
+                    transform: translateX(0% + $j);
+                    animation-timing-function : cubic-bezier(.49,0,.74,1);        
+                }
+                #{ map_get($prct , 25%) } {
+                    transform: translateX($j/2);
+                    animation-timing-function :  cubic-bezier(.1,0,.62,.99);
+                }
+                #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
+                    transform: translateX(0%);
+                }  
+
             }
-            #{ map_get($prct , 25%) } {
-                transform: translateX(80% + $j);
-                animation-timing-function :  cubic-bezier(.1,0,.62,.99);
-            }
-            #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
-                transform: translateX($shift-x + $j);
-            }
+
+
             
             $j : $j + 174%;
         }
 
         100% {
-            transform: translateX($j);
+            transform: translateX(0%);
         }
 
     }
 }
-    
+
+
 @mixin pushed-ball-y {
     // valeur de base des % de l'anim : 0, 25, 58, 79, 100
 
@@ -63,6 +83,8 @@ $way-y : ( 1, -1 );
     @keyframes pushed-ball-y {
 
         @for $i from 0 to $repetitions {
+            
+            
 
             @each $way in $way-y {  
 
@@ -98,6 +120,8 @@ $way-y : ( 1, -1 );
                 #{ map_get($prct , 100%) } {
                     transform: translateY(0);
                 }
+
+
 
                 $j : $j + 1 ;   
 

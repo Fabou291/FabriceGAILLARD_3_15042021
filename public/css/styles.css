@@ -130,14 +130,14 @@ table {
     animation-timing-function: cubic-bezier(0.49, 0, 0.74, 1);
   }
   78.125% {
-    transform: translateX(602%);
+    transform: translateX(261%);
     animation-timing-function: cubic-bezier(0.1, 0, 0.62, 0.99);
   }
   82.25%, 87.5% {
-    transform: translateX(696%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(696%);
+    transform: translateX(0%);
   }
 }
 @keyframes pushed-ball-y {
@@ -249,6 +249,9 @@ a:hover, a:visited, input:hover, input:visited {
 
 button {
   border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: left;
 }
 
 .svg-defs {
@@ -309,15 +312,11 @@ button {
 .like-btn__fill--active {
   z-index: 1;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
+  background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
 }
 .like-btn:hover .like-btn__fill--default {
   transform: scale(0.9);
-}
-.like-btn:hover .like-btn__stroke {
-  color: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
 }
 .like-btn:active .like-btn__stroke, .like-btn:focus .like-btn__stroke {
   color: #18092a;
@@ -335,6 +334,7 @@ button {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .check-card--fadeIn-dl-1 {
   animation: fadeIn 0.5s ease-in-out 0s backwards;
@@ -416,7 +416,7 @@ button {
 .default-card {
   display: block;
   position: relative;
-  flex-basis: 100%;
+  width: 100%;
   overflow: hidden;
   background-color: white;
   border-radius: 15px;
@@ -436,9 +436,13 @@ button {
   object-fit: cover;
   object-position: center center;
 }
+@media screen and (min-width: 1025px) {
+  .default-card__thumb {
+    height: 250px;
+  }
+}
 .default-card__caption {
   display: flex;
-  align-items: flex-star;
   padding: 15px 12px;
 }
 .default-card__title {
@@ -451,6 +455,9 @@ button {
 }
 .default-card p {
   font-size: 17px;
+}
+.default-card p:hover {
+  text-decoration: underline;
 }
 .default-card__like {
   margin: 0 9px 0 0;
@@ -605,7 +612,10 @@ button {
 }
 
 .menu-section {
-  width: 100%;
+  flex-basis: 100%;
+}
+.menu-section:not(:last-child) {
+  margin: 0 0 35px 0;
 }
 .menu-section__title {
   width: 40px;
@@ -615,28 +625,32 @@ button {
   white-space: nowrap;
   border-bottom: 3px solid #99E2D0;
 }
-.menu-section .check-card:not(:last-child) {
+.menu-section__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu-section__card {
+  flex-basis: 100%;
+}
+.menu-section__card:not(:last-child) {
   margin-bottom: 14px;
 }
-.menu-section:not(:last-child) {
-  margin: 0 0 35px 0;
-}
 @media screen and (min-width: 1025px) {
-  .menu-section__cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .menu-section .check-card {
+  .menu-section.starter .menu-section__card {
     flex-basis: calc((100/3)*1% - 20px);
-    padding: 20px 0 20px 20px;
   }
-  .menu-section .check-card__price {
-    padding: 0 20px 0 0;
-  }
-  .menu-section .check-card:not(:last-child) {
+  .menu-section.starter .menu-section__card:not(:last-child) {
     margin-bottom: 0px;
   }
+}
+@media screen and (min-width: 769px) {
+  .menu-section.main-course, .menu-section.dessert {
+    flex-basis: calc(50% - 15px);
+  }
+}
+.menu-section.main-course .menu-section__card:not(:last-child), .menu-section.dessert .menu-section__card:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .tag {
@@ -650,7 +664,7 @@ button {
   background-color: #99E2D0;
 }
 
-.header .relative-container {
+.header .default-container {
   height: 52px;
   padding: 6px 0 0 0;
   display: flex;
@@ -720,6 +734,17 @@ button {
   max-width: 1440px;
   margin: auto;
 }
+.default-container--padding {
+  padding: 0 20px;
+}
+@media screen and (min-width: 769px) {
+  .default-container--padding {
+    padding: 0 50px;
+  }
+}
+.default-container--relative {
+  position: relative;
+}
 
 .relative-container {
   width: 100%;
@@ -744,14 +769,6 @@ button {
   align-items: center;
 }
 
-.index .default-container {
-  padding: 0 20px;
-}
-@media screen and (min-width: 769px) {
-  .index .default-container {
-    padding: 0 50px;
-  }
-}
 .index h2 {
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -799,44 +816,41 @@ button {
 .operation__list-item:not(:last-child) {
   margin: 0 0 24px 0;
 }
+@media screen and (min-width: 1025px) {
+  .operation__list-item:not(:last-child) {
+    margin: 0;
+  }
+}
 
 .restaurant {
   background-color: #f6f6f6;
   padding: 56px 0;
 }
-.restaurant .default-card:not(:last-child) {
-  margin: 0 0 18px 0;
-}
-@media screen and (min-width: 769px) {
-  .restaurant .default-card:not(:last-child) {
-    margin: 0;
-  }
-}
-@media screen and (min-width: 426px) {
-  .restaurant .default-card:not(:last-child) {
-    margin: 0 0 30px 0;
-  }
-}
-@media screen and (min-width: 769px) {
-  .restaurant .default-card {
-    flex-basis: calc(50% - 15px);
-  }
-  .restaurant .default-card:not(:last-child) {
-    margin: 0;
-  }
-  .restaurant .default-card:not(:nth-last-child(-n+2)) {
-    margin: 0 0 30px 0;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .restaurant .default-card__thumb {
-    height: 250px;
-  }
-}
-.restaurant__card {
+.restaurant__cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.restaurant__card {
+  flex-basis: 100%;
+}
+.restaurant__card:not(:last-child) {
+  margin: 0 0 18px 0;
+}
+@media screen and (min-width: 769px) {
+  .restaurant__card:not(:last-child) {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .restaurant__card:not(:nth-last-child(-n+2)) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .restaurant__card {
+    flex-basis: calc(50% - 15px);
+  }
 }
 
 .menu-restaurant {
@@ -863,13 +877,13 @@ button {
   }
 }
 .menu-restaurant__content {
-  padding: 38px 14px;
+  padding: 38px 20px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 769px) {
   .menu-restaurant__content {
-    padding: 48px 40px;
+    padding: 50px;
   }
 }
 .menu-restaurant__header {
@@ -904,29 +918,6 @@ button {
 @media screen and (min-width: 1025px) {
   .menu-restaurant {
     padding-top: 448px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .starter .check-card {
-    flex-basis: calc((100/3)*1% - 20px);
-    padding: 20px 0 20px 20px;
-  }
-  .starter .check-card__price {
-    padding: 0 20px 0 0;
-  }
-  .starter .check-card:not(:last-child) {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .main-course, .dessert {
-    width: calc(50% - 15px);
-  }
-  .main-course .check-card, .dessert .check-card {
-    flex-basis: 100%;
-    margin-bottom: 30px !important;
   }
 }
 

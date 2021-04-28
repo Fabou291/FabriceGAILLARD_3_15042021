@@ -27,12 +27,12 @@ $menuPaddingTop : 38px;
     }
 
     &__content {
-        padding : 38px  14px;
+        padding : 38px  20px;
         border-radius : 40px 40px 0 0;
         background-color : $fifth;  
         
         @include setMediaScreen(laptop) { 
-            padding : 48px  40px;
+            padding : 50px;
         }
     }
 
@@ -73,39 +73,3 @@ $menuPaddingTop : 38px;
 
 }
 
-.starter {
-    @include setMediaScreen(desktop) {
-
-        .check-card {
-            $pad : 20px;
-
-            flex-basis : calc((100/3)*1% - 20px);
-            padding : $pad 0 $pad $pad;
-
-            &__price {
-                padding : 0 $pad 0 0;
-            }
-
-            &:not(:last-child)  {
-                margin-bottom : 0px;
-            }
-
-        }
-        
-    }
-}
-
-.main-course, .dessert { 
-
-    @include setMediaScreen(laptop) {
-        
-        width : calc(50% - 15px);
-
-
-        .check-card {
-            flex-basis : 100%;
-            margin-bottom : 30px !important;
-        }
-    }
-
-}

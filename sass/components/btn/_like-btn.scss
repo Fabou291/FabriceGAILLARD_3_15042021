@@ -1,5 +1,5 @@
 $heart-hover-bg : lighten(grey,20%);
-$heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
+$heart-active-bg : linear-gradient(350deg, $secondary 0%, $primary 100% );
 
 .like-btn {
     padding : 0;
@@ -45,7 +45,6 @@ $heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
             z-index : 1;
 
             -webkit-background-clip: text;
-                    background-clip: text;
             -webkit-text-fill-color: transparent;
 
             background-image : $heart-active-bg;
@@ -59,10 +58,6 @@ $heart-active-bg : linear-gradient(350deg, $primary 0%, $secondary 100% );
 
             &__fill--default { 
                 transform: scale(0.9);
-            }
-
-            &__stroke { 
-                color : $heart-active-bg;
             }
 
         }
