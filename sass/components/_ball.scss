@@ -3,7 +3,7 @@ $anim-duration : 2s;
 $decal : 0.4 * $anim-duration * -1  ;
 
 $length : 2;
-
+$color-balls : $primary, #d66cdb, #bf64db, #b661db, $secondary;
 
 
 .ball {
@@ -19,7 +19,7 @@ $length : 2;
         height : inherit;
     }
 
-    $color-balls : #0157e7, #d62d20, #ffa700, #33b5e6, #018845;
+    
 
     @for $i from 0 to 5 {
         &--#{$i} {

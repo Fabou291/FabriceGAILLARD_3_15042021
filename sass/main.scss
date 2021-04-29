@@ -1,14 +1,12 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins/general_mixins";
 @import "./utils/mixins/animation_mixins";
-@import "./utils/extensions";
 
 @import "./base/resetMeyer";
 @import "./base/typography";
 @import "./base/animation";
 @import "./base/base";
-@import "./base/svg-defs";
+
 
 @import "./components/btn/default-btn";
 @import "./components/btn/like-btn";
@@ -19,7 +17,6 @@
 @import "./components/ball";
 @import "./components/menu-section";
 @import "./components/tag";
-
 
 @import "./layouts/header";
 @import "./layouts/main";
