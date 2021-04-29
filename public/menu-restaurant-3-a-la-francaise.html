@@ -9,218 +9,219 @@
     <meta name="description" content="Réservez le menu qui vous convient! Découvrez des restaurants d’exception, 
     sélectionnés par nos soins.">
 
+    
     <link rel="preload" href="css/fontawesome-all.css" as="style">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/fontawesome-all.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body class="index">
-
-    <div class="loading-display">
-        <div class="loading-display__loader">
-
-            <div class="ball ball--0">
-                <div class="ball__anim-x">
-                    <div class="ball__anim-y ball__object"></div>                            
-                </div>
-            </div>
-
-            <div class="ball ball--1">
-                <div class="ball__anim-x">
-                    <div class="ball__anim-y ball__object"></div>                            
-                </div>
-            </div>
-
-            <div class="ball ball--2">
-                <div class="ball__anim-x">
-                    <div class="ball__anim-y ball__object"></div>                           
-                </div>
-            </div>
-
-            <div class="ball ball--3">
-                <div class="ball__anim-x">
-                    <div class="ball__anim-y ball__object"></div>                            
-                </div>
-            </div>
-
-            <div class="ball ball--4">
-                <div class="ball__anim-x">
-                    <div class="ball__anim-y ball__object"></div>                            
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
+<body>
 
     <!-- header -->
-    <header class="header">
-        <div class="default-container default-container--relative default-container--padding ">
-            <a href="#" title="Retour à la page précédente" class="header__return-btn">
-                <i class="fas fa-arrow-left" ></i>
-            </a>
-            <a href="#" title="Accédez à la page d'accueil" >
-                <img class="header__logo" src="images/logo/ohmyfood.svg" alt="logo ohmyfood">
-            </a>                 
-        </div>
-    </header>
-    
+        <header class="header">
+            <div class="default-container default-container default-container--relative">
+                    <a href="index.html" title="Retour à la page précédente" class="fas fa-arrow-left header__return-btn header__return-btn--visible"></a>
+                    <a href="#" title="Accédez à la page d'accueil" >
+                        <img class="header__logo" src="images/logo/ohmyfood.svg" alt="logo ohmyfood">
+                    </a>                       
+            </div>
+        </header>
+
     <!-- main -->
-    <main class="main home">
+    <main class="main">
+        <div class="default-container">
+            <article class="menu-restaurant" >
+                <picture>
+                    <source media="(min-width: 769px)" srcset="images/restaurants/m/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                    <img class="menu-restaurant__thumb" src="images/restaurants/s/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
+                  </picture>
+                
+                <div class="menu-restaurant__content">   
+                    
+                    <!--menu-restaurant__header -->
+                    <header class="menu-restaurant__header">
 
-        <!-- location-form -->
-        <form class='location-form'>
-            <label for="location">
-                <span class="default-container default-container--padding">
-                    <i class="fas fa-map-marker-alt location-form__icon"></i>
-                    <input id="location" name="location" class="location-form__field" type="text" value="Paris, Belleville" placeholder="Où ?">
-                </span>
-            </label>  
-        </form>
-
-        <!-- presentation -->
-        <section class="presentation">
-            <div class="default-container default-container--padding">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <a href="#" class='default-btn' >Explorer nos restaurants</a>
-            </div>
-        </section>
-
-        <!-- operation -->
-        <section class="operation">
-            <div class="default-container default-container--padding">
-                <h2>Fonctionnement</h2>
-                <ol class="operation__list">
-                    <li class="operation__list-item">
-                        <a href="#" class="step-btn step-btn--fadeIn-dl-1">
-                            <div class="step-btn__number">1</div>
-                            <span class="fas fa-mobile-alt step-btn__icon"></span>
-                            <span class="step-btn__description" >Choisissez un restaurant</span>                        
-                        </a>
-                    </li>
-                    <li class="operation__list-item">
-                        <a href="#" class="step-btn step-btn--fadeIn-dl-2">
-                            <div class="step-btn__number">2</div>
-                            <span class="fas fa-list-ul step-btn__icon"></span>
-                            <span class="step-btn__description" >Composez votre menu</span>                        
-                        </a>
-                    </li>
-                    <li class="operation__list-item">
-                        <a href="#" class="step-btn step-btn--fadeIn-dl-3">
-                            <div class="step-btn__number">3</div>
-                            <span class="fas fa-store step-btn__icon"></span>
-                            <span class="step-btn__description" >Dégustez au restaurant</span>                        
-                        </a>
-                    </li>
-                </ol>                    
-            </div>
-        </section>
-
-        <!-- restaurant -->
-        <section class="restaurant">
-            <div class="default-container default-container--padding">
-                <h2>Restaurants</h2>
-                <div class="restaurant__cards-container">
-
-                    <article class="restaurant__card default-card">
-                            <span class="tag tag--new default-card__tag">Nouveau</span>
-                            <a href="menu-restaurant-1-la-palette-du-gout.html" >
-                                <img class="default-card__thumb" src="images/restaurants/s/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
-                            </a>
-                            <div class="default-card__caption">
-                                <div>
-                                    <h3 class="default-card__title" >
-                                        <a href="menu-restaurant-1-la-palette-du-gout.html" >La palette du goût</a>
-                                    </h3>
-                                    <p>
-                                        <a href="#">Ménilmontant</a>
-                                    </p>
-                                </div>
-                                <div class="default-card__like">
-                                    <button class="like-btn">
-                                        <span class="like-btn__stroke"></span>
-                                        <span class="like-btn__fill like-btn__fill--default"></span>
-                                        <span class="like-btn__fill like-btn__fill--active"></span>
-                                    </button>
-                                </div>
-                            </div>            
-                    </article>                        
-
-                    <article class="restaurant__card default-card">
-                        <span class="tag tag--new default-card__tag">Nouveau</span>
-                        <a href="menu-restaurant-2-la-note-enchantee.html">
-                            <img class="default-card__thumb" src="images/restaurants/s/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
-                        </a>
-                        <div class="default-card__caption">
-                            <div>
-                                <h3 class="default-card__title" >
-                                    <a href="menu-restaurant-2-la-note-enchantee.html">La note enchantée</a>
-                                </h3>
-                                <p>
-                                    <a href="#">Charonne</a>
-                                </p>
-                            </div>
-                            <div class="default-card__like">
-                                <button class="like-btn">
-                                    <span class="like-btn__stroke"></span>
-                                    <span class="like-btn__fill like-btn__fill--default"></span>
-                                    <span class="like-btn__fill like-btn__fill--active"></span>
-                                </button>
-                            </div>
+                        <h1 class="menu-restaurant__title" >À la française</h1>
+                        <div class="menu-restaurant__like">
+                            <button class="like-btn">
+                                <span class="like-btn__stroke"></span>
+                                <span class="like-btn__fill like-btn__fill--default"></span>
+                                <span class="like-btn__fill like-btn__fill--active"></span>
+                            </button>
                         </div>
-                    </article>                        
+                    </header>
 
-                    <article class="restaurant__card default-card">
-                        <a href="menu-restaurant-3-a-la-francaise.html">
-                            <img class="default-card__thumb" src="images/restaurants/s/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
-                        </a>   
-                        <div class="default-card__caption">
-                            <div>
-                                <h3 class="default-card__title" >
-                                    <a href="menu-restaurant-3-a-la-francaise.html">A la francaise</a>
-                                </h3>
-                                <p>
-                                    <a href="#">Cité Rouge</a>
-                                </p>
-                            </div>
-                            <div class="default-card__like">
-                                <button class="like-btn">
-                                    <span class="like-btn__stroke"></span>
-                                    <span class="like-btn__fill like-btn__fill--default"></span>
-                                    <span class="like-btn__fill like-btn__fill--active"></span>
-                                </button>
-                            </div>
-                        </div>                    
-                    </article>
+                    <!-- menu-restaurant__main -->
+                    <main class="menu-restaurant__main">
 
-                    <article class="restaurant__card default-card">
-                        <a href="menu-restaurant-4-le-delice-des-sens.html">
-                            <img class="default-card__thumb" src="images/restaurants/s/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un assieste remplie posée sur une table" >
-                        </a>
-                        <div class="default-card__caption">
-                            <div>
-                                <h3 class="default-card__title" >
-                                    <a href="menu-restaurant-4-le-delice-des-sens.html">Le délice des sens</a>
-                                </h3>
-                                <p>
-                                    <a href="#">Folie-Méricourt</a>
-                                </p>
-                            </div>
-                            <div class="default-card__like">
-                                <button class="like-btn">
-                                    <span class="like-btn__stroke"></span>
-                                    <span class="like-btn__fill like-btn__fill--default"></span>
-                                    <span class="like-btn__fill like-btn__fill--active"></span>
+                        <!--Entrées -->
+                        <section class="menu-section starter">
+                            
+                            <h2 class="menu-section__title">ENTRÉES</h2>
+
+                            <div class="menu-section__cards-container">
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-1">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Tartare de poulpe acidulé</h3>
+                                            <p class="check-card__text">Aux zestes d'orange</p>    
+                                        </div>
+                                        <span class="check-card__price">25€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
                                 </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-2">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Velouté de légumes d'antan</h3>
+                                            <p class="check-card__text">Carotte, panais, topinambour</p>    
+                                        </div>
+                                        <span class="check-card__price">35€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-3">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Soupe à l'oignon</h3>
+                                            <p class="check-card__text">Revisitée</p>    
+                                        </div>
+                                        <span class="check-card__price">20€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>                        
                             </div>
-                        </div>                    
-                    </article>                           
-             
-                </div>                    
-            </div>
-        </section>            
+
+
+                        </section>
+
+                        <!--Plats -->
+                        <section class="menu-section main-course">
+                            
+                            <h2 class="menu-section__title">PLATS</h2>
+
+                            <div class="menu-section__cards-container">
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-4">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Coquilles Saint-Jacques</h3>
+                                            <p class="check-card__text">Accompagnées d'une purée de panais</p>    
+                                        </div>
+                                        <span class="check-card__price">40€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-5">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Magret de canard</h3>
+                                            <p class="check-card__text">Et parmentier de pommes de terre</p>    
+                                        </div>
+                                        <span class="check-card__price">35€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-6">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Pigeonneau d’Ille-et-Vilaine</h3>
+                                            <p class="check-card__text">Sur son lit de gnocchis aux légumes</p>    
+                                        </div>
+                                        <span class="check-card__price">44€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>                        
+                            </div>
+
+
+                        </section>
+
+                        <!--Desserts -->
+                        <section class="menu-section dessert">
+                            
+                            <h2 class="menu-section__title">DESSERTS</h2>
+
+                            <div class="menu-section__cards-container">
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-7">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Pétales de violettes glacés</h3>
+                                            <p class="check-card__text">Et purée de noisettes</p>    
+                                        </div>
+                                        <span class="check-card__price">18€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-8">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Fondant au chocolat</h3>
+                                            <p class="check-card__text">Revisité</p>    
+                                        </div>
+                                        <span class="check-card__price">22€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>
+
+                                <button class="menu-section__card check-card check-card--fadeIn-dl-9">
+                                    <div class="check-card__content">
+                                        <div>
+                                            <h3 class="check-card__title">Millefeuille croustillant</h3>
+                                            <p class="check-card__text">Myrtilles et pâte d’amande</p>    
+                                        </div>
+                                        <span class="check-card__price">23€</span>
+                                    </div>
+
+                                    <span class="check-card__check">
+                                        <i class="fas fa-check-circle check-card__icon-check"></i>
+                                    </span>
+                                </button>                        
+                            </div>
+
+
+                        </section>
+
+                    </main>
+                    
+                    <!-- menu-restaurant__footer -->
+                    <footer class="menu-restaurant__footer">
+                        <a href="#" class="default-btn">Commander</a>                        
+                    </footer >
+
+                </div>
+            </article>            
+        </div>
+
     </main>
 
     <!-- footer -->
@@ -256,9 +257,10 @@
                     <a href="#">Mentions légales</a>
                 </li>
                 <li class="footer__list-item">
-                    <a href="mailto:contact@ohmyfood.fr">Contact</a>
+                    <a href="#">Contact</a>
                 </li>
             </ul>              
+
         </div>
     </footer>
 

@@ -14,10 +14,13 @@ $tertiary-font  : #008766;
 /* -- Breakpoints -- */
 $min-breakpoints : (
     tablette    : 426px,
-    laptop      : 769px,
+    laptop      : 795px,
     desktop     : 1025px
 );
 
+/*-- Ball -- */
 
+$__ball_diameter : 30px;
+$spacing : $__ball_diameter * 0.75;
 
 

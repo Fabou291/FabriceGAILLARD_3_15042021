@@ -1,9 +1,9 @@
-$__ball_diameter : 30px;
-$spacing : $__ball_diameter * 0.75;
+
 $anim-duration : 2s;
 $decal : 0.4 * $anim-duration * -1  ;
 
 $length : 2;
+
 
 
 .ball {
@@ -32,11 +32,13 @@ $length : 2;
                 }
 
                 &__anim-x {
-                    animation : pushed-ball-x $anim-duration*$length #{$i*$decal} infinite;
+                    animation : pushed-ball-x $anim-duration*$length #{$i*$decal};
+                    animation-iteration-count : 2;
                 }
             
                 &__anim-y {
-                    animation : pushed-ball-y $anim-duration*$length #{$i*$decal} infinite;
+                    animation : pushed-ball-y $anim-duration*$length #{$i*$decal};
+                    animation-iteration-count : 2;
                 }                
             }
         }

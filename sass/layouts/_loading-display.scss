@@ -11,6 +11,9 @@
 
     &__loader {
         @include setFlexCenterCenter;
+        transform : translateX( ($__ball_diameter + ($spacing/2)) ) ;
     }
+
+    animation : fadeOut 0.5s 1.5s forwards, zIndex 0s 2s forwards;
 
 }

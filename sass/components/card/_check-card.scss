@@ -5,25 +5,28 @@ $transitionTime : 0.3s;
 
 .check-card {
     position : relative;
-    display : flex;
-    align-items: center;
     padding : $paddingCheck-card;
     overflow : hidden;
-
-
-    border-radius : 15px;
-
+    width : 100%;
     
+    border-radius : 15px;
 
     background-color: white;
     @include setBoxShadow;
 
-    @include addFadeInDelayModifier($howMany : 4);
+    @include addFadeInDelayModifier($howMany : 9);
 
     cursor : pointer;
 
+    &:hover {
+        @include setBoxShadow(rgba(0,0,0,0.5));
+    }
+
     &:active, &:focus {
         .check-card {
+            &__content { 
+                width : calc(100% - #{$widthCheck*2} + #{nth($paddingCheck-card, 2)} );
+            }
             &__check {
                 width : $widthCheck*2;
                 transform : translateX($widthCheck*-1);
@@ -31,14 +34,7 @@ $transitionTime : 0.3s;
             &__icon-check {
                 transform : rotate(360deg);
             }
-            &__content {
-                width : calc(100% - #{$widthCheck*2} + #{nth($paddingCheck-card, 2)} );
-            }
         }
-    }
-
-    &:hover {
-        @include setBoxShadow(rgba(0,0,0,0.5));
     }
 
     &__content {
@@ -81,16 +77,15 @@ $transitionTime : 0.3s;
     }
 
     &__check {
+        display : none;
         position : absolute;
         right : calc(#{$widthCheck} * -1);
         top : 0;
         @include setFlexCenterCenter;
         @include setSize($widthCheck, 100%);
 
-
         color : white;
         font-size : 20px;
-
 
         background-color: $tertiary;
 
@@ -102,7 +97,5 @@ $transitionTime : 0.3s;
         transition : transform $transitionTime 0.1s ease-out;
         transform: rotate(90deg);
     }
-
-    
 
 }

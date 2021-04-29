@@ -53,9 +53,12 @@ $menuPaddingTop : 38px;
     }
 
     &__main {
-        display : flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include setMediaScreen(laptop){
+            display : flex;
+            justify-content: space-between;
+            flex-wrap: wrap;            
+        }
+
     }
 
     &__footer {

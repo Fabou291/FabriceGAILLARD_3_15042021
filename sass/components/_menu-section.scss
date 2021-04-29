@@ -17,14 +17,9 @@
         border-bottom: 3px solid $tertiary;
     }
     
-    &__cards-container {
-        display : flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+
 
     &__card {
-        flex-basis : 100%;
 
         &:not(:last-child)  {
             margin-bottom : 14px;
@@ -32,21 +27,20 @@
     }
 
 
-    &.starter &__card {
-        @include setMediaScreen(desktop) {
-            flex-basis : calc((100/3)*1% - 20px);
-
-            &:not(:last-child)  {
-                margin-bottom : 0px;
-            }
-        }
-    }
     
     &.main-course, &.dessert { 
         @include setMediaScreen(laptop) {
             flex-basis : calc(50% - 15px);
         }
     }
+
+    &.main-course {
+        @include setMediaScreen(laptop) {
+            margin-right : 30px;
+        }
+    }
+
+
 
     &.main-course &__card, &.dessert &__card {
         &:not(:last-child) {

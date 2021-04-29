@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* -- Colors -- */
 /* -- Breakpoints -- */
+/*-- Ball -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -89,6 +90,19 @@ table {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zIndex {
+  100% {
+    z-index: -1;
   }
 }
 @keyframes pushed-ball-x {
@@ -263,6 +277,7 @@ button {
   min-width: 186px;
   padding: 17.5px 22px;
   height: 100%;
+  white-space: nowrap;
   border-radius: 100px;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.4);
@@ -327,10 +342,9 @@ button {
 
 .check-card {
   position: relative;
-  display: flex;
-  align-items: center;
   padding: 14px 11px 12px 11px;
   overflow: hidden;
+  width: 100%;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
@@ -348,18 +362,33 @@ button {
 .check-card--fadeIn-dl-4 {
   animation: fadeIn 0.5s ease-in-out 0.45s backwards;
 }
+.check-card--fadeIn-dl-5 {
+  animation: fadeIn 0.5s ease-in-out 0.6s backwards;
+}
+.check-card--fadeIn-dl-6 {
+  animation: fadeIn 0.5s ease-in-out 0.75s backwards;
+}
+.check-card--fadeIn-dl-7 {
+  animation: fadeIn 0.5s ease-in-out 0.9s backwards;
+}
+.check-card--fadeIn-dl-8 {
+  animation: fadeIn 0.5s ease-in-out 1.05s backwards;
+}
+.check-card--fadeIn-dl-9 {
+  animation: fadeIn 0.5s ease-in-out 1.2s backwards;
+}
+.check-card:hover {
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.5);
+}
+.check-card:active .check-card__content, .check-card:focus .check-card__content {
+  width: calc(100% - 60px + 11px );
+}
 .check-card:active .check-card__check, .check-card:focus .check-card__check {
   width: 60px;
   transform: translateX(-30px);
 }
 .check-card:active .check-card__icon-check, .check-card:focus .check-card__icon-check {
   transform: rotate(360deg);
-}
-.check-card:active .check-card__content, .check-card:focus .check-card__content {
-  width: calc(100% - 60px + 11px );
-}
-.check-card:hover {
-  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.5);
 }
 .check-card__content {
   display: flex;
@@ -377,15 +406,15 @@ button {
   margin-bottom: 6px;
   font-size: 18px;
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .check-card__text {
   font-size: 15px;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .check-card__price {
   font-size: 15px;
@@ -394,6 +423,7 @@ button {
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
 }
 .check-card__check {
+  display: none;
   position: absolute;
   right: calc(30px * -1);
   top: 0;
@@ -553,10 +583,12 @@ button {
   background-color: #0157e7;
 }
 .ball--0 .ball__anim-x {
-  animation: pushed-ball-x 4s 0s infinite;
+  animation: pushed-ball-x 4s 0s;
+  animation-iteration-count: 2;
 }
 .ball--0 .ball__anim-y {
-  animation: pushed-ball-y 4s 0s infinite;
+  animation: pushed-ball-y 4s 0s;
+  animation-iteration-count: 2;
 }
 .ball--1 {
   transform: translateX(-174%);
@@ -565,10 +597,12 @@ button {
   background-color: #d62d20;
 }
 .ball--1 .ball__anim-x {
-  animation: pushed-ball-x 4s -0.8s infinite;
+  animation: pushed-ball-x 4s -0.8s;
+  animation-iteration-count: 2;
 }
 .ball--1 .ball__anim-y {
-  animation: pushed-ball-y 4s -0.8s infinite;
+  animation: pushed-ball-y 4s -0.8s;
+  animation-iteration-count: 2;
 }
 .ball--2 {
   transform: translateX(-348%);
@@ -577,10 +611,12 @@ button {
   background-color: #ffa700;
 }
 .ball--2 .ball__anim-x {
-  animation: pushed-ball-x 4s -1.6s infinite;
+  animation: pushed-ball-x 4s -1.6s;
+  animation-iteration-count: 2;
 }
 .ball--2 .ball__anim-y {
-  animation: pushed-ball-y 4s -1.6s infinite;
+  animation: pushed-ball-y 4s -1.6s;
+  animation-iteration-count: 2;
 }
 .ball--3 {
   transform: translateX(-522%);
@@ -589,10 +625,12 @@ button {
   background-color: #33b5e6;
 }
 .ball--3 .ball__anim-x {
-  animation: pushed-ball-x 4s -2.4s infinite;
+  animation: pushed-ball-x 4s -2.4s;
+  animation-iteration-count: 2;
 }
 .ball--3 .ball__anim-y {
-  animation: pushed-ball-y 4s -2.4s infinite;
+  animation: pushed-ball-y 4s -2.4s;
+  animation-iteration-count: 2;
 }
 .ball--4 {
   transform: translateX(-696%);
@@ -601,10 +639,12 @@ button {
   background-color: #018845;
 }
 .ball--4 .ball__anim-x {
-  animation: pushed-ball-x 4s -3.2s infinite;
+  animation: pushed-ball-x 4s -3.2s;
+  animation-iteration-count: 2;
 }
 .ball--4 .ball__anim-y {
-  animation: pushed-ball-y 4s -3.2s infinite;
+  animation: pushed-ball-y 4s -3.2s;
+  animation-iteration-count: 2;
 }
 .ball__object {
   border-radius: 30px;
@@ -625,28 +665,17 @@ button {
   white-space: nowrap;
   border-bottom: 3px solid #99E2D0;
 }
-.menu-section__cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.menu-section__card {
-  flex-basis: 100%;
-}
 .menu-section__card:not(:last-child) {
   margin-bottom: 14px;
 }
-@media screen and (min-width: 1025px) {
-  .menu-section.starter .menu-section__card {
-    flex-basis: calc((100/3)*1% - 20px);
-  }
-  .menu-section.starter .menu-section__card:not(:last-child) {
-    margin-bottom: 0px;
-  }
-}
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .menu-section.main-course, .menu-section.dessert {
     flex-basis: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 795px) {
+  .menu-section.main-course {
+    margin-right: 30px;
   }
 }
 .menu-section.main-course .menu-section__card:not(:last-child), .menu-section.dessert .menu-section__card:not(:last-child) {
@@ -737,7 +766,7 @@ button {
 .default-container--padding {
   padding: 0 20px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .default-container--padding {
     padding: 0 50px;
   }
@@ -762,11 +791,13 @@ button {
   align-items: center;
   background-color: white;
   z-index: 3;
+  animation: fadeOut 0.5s 1.5s forwards, zIndex 0s 2s forwards;
 }
 .loading-display__loader {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(41.25px);
 }
 
 .index h2 {
@@ -837,17 +868,17 @@ button {
 .restaurant__card:not(:last-child) {
   margin: 0 0 18px 0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .restaurant__card:not(:last-child) {
     margin: 0;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .restaurant__card:not(:nth-last-child(-n+2)) {
     margin: 0 0 30px 0;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .restaurant__card {
     flex-basis: calc(50% - 15px);
   }
@@ -866,7 +897,7 @@ button {
   object-fit: cover;
   object-position: center center;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .menu-restaurant__thumb {
     height: 350px;
   }
@@ -881,7 +912,7 @@ button {
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .menu-restaurant__content {
     padding: 50px;
   }
@@ -899,10 +930,12 @@ button {
 .menu-restaurant__like {
   margin: 0 0 0 auto;
 }
-.menu-restaurant__main {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@media screen and (min-width: 795px) {
+  .menu-restaurant__main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 .menu-restaurant__footer {
   display: flex;
@@ -910,7 +943,7 @@ button {
   align-items: center;
   margin: 50px 0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 795px) {
   .menu-restaurant {
     padding-top: 298px;
   }

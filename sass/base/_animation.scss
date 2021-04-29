@@ -9,6 +9,21 @@
     }
 }
 
+@keyframes fadeOut {
+    0%      { 
+        opacity:1;
+    }
+    100%    {
+        opacity:0;
+    }
+}
+
+@keyframes zIndex {
+    100%    {
+        z-index : -1;
+    }
+}
+
 
 @include  pushed-ball-x;
 
