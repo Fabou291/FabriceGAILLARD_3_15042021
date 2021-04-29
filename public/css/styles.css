@@ -572,6 +572,12 @@ button {
 .location-form__field:focus {
   outline: none;
 }
+@media screen and (min-width: 426px) {
+  .location-form__field {
+    font-size: 18px;
+    height: 70px;
+  }
+}
 
 .ball {
   width: 30px;
@@ -706,7 +712,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 426px) {
   .header .default-container {
     height: 70px;
   }
@@ -715,7 +721,7 @@ button {
   padding: 5px 0 0 0;
   width: 164px;
 }
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 426px) {
   .header__logo {
     width: 180px;
   }

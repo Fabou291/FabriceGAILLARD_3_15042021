@@ -8,7 +8,7 @@ $__return-btn_shift_top : 6px;
         padding : 6px 0 0 0;
         @include setFlexCenterCenter;
 
-        @include setMediaScreen(laptop) {
+        @include setMediaScreen(tablette) {
             height : 70px;
         }
 
@@ -18,7 +18,7 @@ $__return-btn_shift_top : 6px;
         padding : 5px 0 0 0; 
         width : 164px;
 
-        @include setMediaScreen(laptop) {
+        @include setMediaScreen(tablette) {
             width : 180px;
         }
 
