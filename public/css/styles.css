@@ -467,7 +467,7 @@ button {
     height: 250px;
   }
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .default-card__thumb {
     height: 174px;
   }
@@ -674,12 +674,12 @@ button {
 .menu-section__card:not(:last-child) {
   margin-bottom: 14px;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-section.main-course, .menu-section.dessert {
     flex-basis: calc(50% - 15px);
   }
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-section.main-course {
     margin-right: 30px;
   }
@@ -706,7 +706,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .header .default-container {
     height: 70px;
   }
@@ -715,7 +715,7 @@ button {
   padding: 5px 0 0 0;
   width: 164px;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .header__logo {
     width: 180px;
   }
@@ -755,7 +755,7 @@ button {
   font-size: 18px;
   margin: 0 0 31px 0;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .footer__logo {
     width: 200px;
     margin: 0 auto 50px auto;
@@ -764,7 +764,7 @@ button {
 .footer__logo path {
   fill: white;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .footer__list {
     display: flex;
     justify-content: center;
@@ -774,7 +774,7 @@ button {
   padding: 0 0 10px 0;
   letter-spacing: 0.1px;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .footer__list-item:not(:last-child) {
     margin: 0 15px 0 0;
   }
@@ -799,7 +799,7 @@ button {
 .default-container--padding {
   padding: 0 20px;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .default-container--padding {
     padding: 0 50px;
   }
@@ -896,17 +896,17 @@ button {
 .restaurant__card:not(:last-child) {
   margin: 0 0 18px 0;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .restaurant__card:not(:last-child) {
     margin: 0;
   }
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .restaurant__card:not(:nth-last-child(-n+2)) {
     margin: 0 0 30px 0;
   }
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .restaurant__card {
     flex-basis: calc(50% - 15px);
   }
@@ -925,7 +925,7 @@ button {
   object-fit: cover;
   object-position: center center;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-restaurant__thumb {
     height: 350px;
   }
@@ -940,7 +940,7 @@ button {
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-restaurant__content {
     padding: 50px;
   }
@@ -958,7 +958,7 @@ button {
 .menu-restaurant__like {
   margin: 0 0 0 auto;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-restaurant__main {
     display: flex;
     justify-content: space-between;
@@ -971,7 +971,7 @@ button {
   align-items: center;
   margin: 50px 0;
 }
-@media screen and (min-width: 815px) {
+@media screen and (min-width: 825px) {
   .menu-restaurant {
     padding-top: 298px;
   }
