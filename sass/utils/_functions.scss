@@ -1,3 +1,0 @@
-@function is_in_map($list, $var) {
-    @return (null == index($list, $var));
-}
