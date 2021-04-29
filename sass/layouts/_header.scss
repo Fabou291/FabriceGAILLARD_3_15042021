@@ -7,11 +7,21 @@ $__return-btn_shift_top : 6px;
         height : $header_height;
         padding : 6px 0 0 0;
         @include setFlexCenterCenter;
+
+        @include setMediaScreen(laptop) {
+            height : 70px;
+        }
+
     }
 
     &__logo {
         padding : 5px 0 0 0; 
         width : 164px;
+
+        @include setMediaScreen(laptop) {
+            width : 180px;
+        }
+
     }
 
     &__return-btn {

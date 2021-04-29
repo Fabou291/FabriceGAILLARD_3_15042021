@@ -3,7 +3,7 @@
     min-height : 197px;
     background-color : $fourth;
     color : white;
-    
+
 
     &__logo {
         width : 99px;
@@ -12,15 +12,36 @@
         font-size : 18px;
         margin : 0 0 31px 0;
         
+        @include setMediaScreen(laptop){
+            width : 200px;
+            margin : 0 auto 50px auto;
+        }
+
         path {
             fill : white;
         }
 
     }
 
+    &__list {
+        @include setMediaScreen(laptop){
+            display : flex;
+            justify-content: center; 
+            
+
+        }
+    }
+
     &__list-item {
         padding : 0 0 10px 0;
         letter-spacing: 0.1px;
+
+        @include setMediaScreen(laptop){
+           
+            &:not(:last-child){
+                margin : 0 15px 0 0;
+            }
+        }
 
         &--icon {
             @include robotoTypo('Regular');
@@ -36,7 +57,6 @@
                 text-decoration: underline;
             }
         }
-
     }
 
 

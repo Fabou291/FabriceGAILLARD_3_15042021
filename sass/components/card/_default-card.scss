@@ -27,9 +27,21 @@
         object-fit : cover;
         object-position: center center;
 
+        @include setMediaScreen(tablette) {
+            height : 250px;
+        }
+        
+        @include setMediaScreen(laptop) {
+            height : 174px;
+        }
+
         @include setMediaScreen(desktop) {
             height : 250px;
         }
+
+
+
+
 
     }
 
