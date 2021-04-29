@@ -12,6 +12,11 @@
         font-size : 18px;
         margin : 0 0 31px 0;
         
+        @include setMediaScreen(tablette){
+            width : 150px;
+            margin : 0 auto 30px auto;
+        }
+
         @include setMediaScreen(laptop){
             width : 200px;
             margin : 0 auto 50px auto;
@@ -24,11 +29,13 @@
     }
 
     &__list {
+        @include setMediaScreen(tablette){
+            text-align: center;
+        }
+
         @include setMediaScreen(laptop){
             display : flex;
             justify-content: center; 
-            
-
         }
     }
 
