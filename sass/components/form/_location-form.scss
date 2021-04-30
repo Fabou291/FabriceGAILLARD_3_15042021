@@ -1,10 +1,13 @@
+$margin : 90px;
+
 .location-form {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1) inset;
     background-color : #eaeaea;
     color : $fourth;
 
     .default-container {
-        @include setFlexCenterCenter;
+        display : block;
+        width : 100%;
     }
 
     label {
@@ -12,12 +15,20 @@
         cursor : text;
     }
 
+    &__container {
+        display : flex;
+        align-items : center;
+        width : auto;
+        margin : 0 0 0 50%;
+    }
+
     &__icon{
-        margin : 0 15px 0 0;
+        margin : 0 0 0 $margin * -1;
     }
 
     &__field {
-        @include setSize(140px, 50px);
+        padding : 0 0 0 15px;
+        @include setSize( calc(100% + #{$margin} ), 50px);
         border : none;
 
         background-color: transparent;
@@ -25,6 +36,7 @@
         font-size : 15.5px;
         letter-spacing: 0.2px;
         @include robotoTypo('Medium');
+
 
         &:focus {
             outline: none;

@@ -37,14 +37,14 @@ https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20c
 
 - Page d'accueil : 
     - ✓ Input permettant de choisir ou saisir un lieu
-    - ✓ Courte présentation de l'entreprise (article ? aside ?)
+    - ✓ Courte présentation de l'entreprise
     - ✓ Une section contenant les 4 menus sous forme de carte. Au click on est redirigé sur la page du menu
 
 - 4 pages de menu
     - ✓ article : contient le menu du restaurant
 
 - Footer : 
-    - ✓ Identifique sur toute les pages
+    - ✓ Identique sur toute les pages
     - ✓ Au clic sur "Contact, renvoyé sur une adresse mail
 
 - Header :
