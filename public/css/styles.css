@@ -525,6 +525,9 @@ button {
   background-color: #f5edff;
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.35);
 }
+.step-btn:hover .step-btn__icon {
+  color: #9356DC;
+}
 .step-btn__number {
   width: 24px;
   position: absolute;
@@ -541,6 +544,12 @@ button {
   font-size: 20px;
   width: 40px;
   color: #7e7e7e;
+}
+.step-btn__icon--M {
+  font-size: 18px;
+}
+.step-btn__icon--S {
+  font-size: 16px;
 }
 
 .location-form {
@@ -770,7 +779,7 @@ button {
 @media screen and (min-width: 825px) {
   .footer__logo {
     width: 200px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 40px auto;
   }
 }
 .footer__logo path {

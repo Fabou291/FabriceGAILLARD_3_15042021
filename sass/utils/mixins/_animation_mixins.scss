@@ -24,8 +24,6 @@ $way-y : ( 1, -1 );
 
             @if not ( $i == 3 ) {
 
-
-
                 #{ map_get($prct , 0%) } {
                     transform: translateX(0% + $j);
                     animation-timing-function : cubic-bezier(.49,0,.74,1);        
@@ -36,7 +34,8 @@ $way-y : ( 1, -1 );
                 }
                 #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
                     transform: translateX($shift-x + $j);
-                }                
+                }    
+
             } @else {
 
                 #{ map_get($prct , 0%) } {

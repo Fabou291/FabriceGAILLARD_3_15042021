@@ -29,7 +29,7 @@ https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20c
 
 - ✓ Le site sera developpé en utilisant l'apporche mobile-first
 - ✓ L’ensemble du site devra être responsive sur mobile, tablette et desktop.
-- Les pages devront passer la validation W3C en HTML et CSS sans erreur.
+- ✓ Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 - ✓ Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
 
@@ -38,7 +38,8 @@ https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20c
 - Page d'accueil : 
     - ✓ Input permettant de choisir ou saisir un lieu
     - ✓ Courte présentation de l'entreprise (article ? aside ?)
-    - Une section contenant les 4 menus sous forme de carte. Au click on est redirigé sur la page du menu
+    - ✓ Une section contenant les 4 menus sous forme de carte. Au click on est redirigé sur la page du menu
+
 - 4 pages de menu
     - ✓ article : contient le menu du restaurant
 
