@@ -3,6 +3,7 @@ $paddingCheck-card : 14px 11px 12px 11px;
 
 $transitionTime : 0.3s;
 
+
 .check-card {
     position : relative;
     padding : $paddingCheck-card;
@@ -94,7 +95,7 @@ $transitionTime : 0.3s;
     }
 
     &__icon-check {
-        transition : transform $transitionTime 0.1s ease-out;
+        transition : transform #{$transitionTime} 0.11s ease-out;
         transform: rotate(90deg);
     }
 

@@ -435,7 +435,7 @@ button {
   transform: translateX(0);
 }
 .check-card__icon-check {
-  transition: transform 0.3s 0.1s ease-out;
+  transition: transform 0.3s 0.11s ease-out;
   transform: rotate(90deg);
 }
 
@@ -698,9 +698,6 @@ button {
   .menu-section.main-course {
     margin-right: 30px;
   }
-}
-.menu-section.main-course .menu-section__card:not(:last-child), .menu-section.dessert .menu-section__card:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .tag {
