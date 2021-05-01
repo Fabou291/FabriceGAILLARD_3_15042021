@@ -4,6 +4,7 @@
     align-items: center;
     height : 71px;
     padding : 0 34px;
+    min-width : 0;
 
     @include setBoxShadow(rgba(0,0,0,0.2));
     background-color: $fifth;
@@ -44,6 +45,9 @@
     }
 
     &__description {
+        @include setMediaScreen(laptop) {
+            @include setEllipsis;            
+        }
 
     }
 

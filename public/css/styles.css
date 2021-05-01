@@ -507,6 +507,7 @@ button {
   align-items: center;
   height: 71px;
   padding: 0 34px;
+  min-width: 0;
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.2);
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -539,6 +540,13 @@ button {
   font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
+}
+@media screen and (min-width: 825px) {
+  .step-btn__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .step-btn__icon {
   font-size: 20px;
