@@ -1,10 +1,9 @@
 # P3 - Dynamisez une page web avec des animations CSS
-https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf
 ## Identité graphique
 
 - Font : 
-    - Logo et titres: Shrikhand
-    - Texte: Roboto
+    - Logo et titres : Shrikhand
+    - Texte : Roboto
 - Couleurs :
     - primary : #9356DC
     - secondary : #FF79DA
