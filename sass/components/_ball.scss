@@ -1,8 +1,6 @@
 
-$anim-duration : 2s;
-$decal : 0.4 * $anim-duration * -1  ;
-
-$length : 2;
+$anim-duration : 4s;
+$decal : 0.4 * $anim-duration/2 * -1  ;
 $color-balls : $primary, #d66cdb, #bf64db, #b661db, $secondary;
 
 
@@ -32,12 +30,12 @@ $color-balls : $primary, #d66cdb, #bf64db, #b661db, $secondary;
                 }
 
                 &__anim-x {
-                    animation : pushed-ball-x $anim-duration*$length #{$i*$decal};
+                    animation : pushed-ball-x $anim-duration #{$i*$decal};
                     animation-iteration-count : 2;
                 }
             
                 &__anim-y {
-                    animation : pushed-ball-y $anim-duration*$length #{$i*$decal};
+                    animation : pushed-ball-y $anim-duration #{$i*$decal};
                     animation-iteration-count : 2;
                 }                
             }

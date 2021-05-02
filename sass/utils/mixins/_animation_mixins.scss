@@ -1,136 +1,101 @@
-$repetitions : 2;
-$way-y : ( 1, -1 );
+$loading_spinner : (
+    anim_division : 4
+);
 
 @mixin pushed-ball-x {
 
-    $total_repetition : $repetitions * length($way-y);
-    $shift-x : 174%;
-    $prout : $total_repetition * 2;
+    $repeat : map-get($loading_spinner, anim_division);
+    $x_increment : 0;
+    $x_positions : ();
 
 
     @keyframes pushed-ball-x {
-        // valeur de base des % de l'anim : 0, 25, 58, 100
 
-        $j : 0;
+        @for $i from 0 to $repeat {
+            $prct_increment : 100% / $repeat * $i;
 
-        @for $i from 0 to $total_repetition {
-            $trucbidule : 100% / $total_repetition * $i;
-                $prct : (
-                    0%      : (0% / $prout) + $trucbidule,
-                    25%     : (25% / $prout) + $trucbidule,
-                    58%     : (58% / $prout) + $trucbidule,
-                    100%    : (100% / $prout) + $trucbidule
-                );     
+            @if not ( $i == $repeat - 1 ) {
 
-            @if not ( $i == 3 ) {
-
-                #{ map_get($prct , 0%) } {
-                    transform: translateX(0% + $j);
-                    animation-timing-function : cubic-bezier(.49,0,.74,1);        
-                }
-                #{ map_get($prct , 25%) } {
-                    transform: translateX(80% + $j);
-                    animation-timing-function :  cubic-bezier(.1,0,.62,.99);
-                }
-                #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
-                    transform: translateX($shift-x + $j);
-                }    
+                $x_positions : (
+                    0% + $x_increment, 
+                    80% + $x_increment, 
+                    $x_increment + 174%
+                );
+                $x_increment : $x_increment + 174%;  
 
             } @else {
 
-                #{ map_get($prct , 0%) } {
-                    transform: translateX(0% + $j);
-                    animation-timing-function : cubic-bezier(.49,0,.74,1);        
-                }
-                #{ map_get($prct , 25%) } {
-                    transform: translateX($j/2);
-                    animation-timing-function :  cubic-bezier(.1,0,.62,.99);
-                }
-                #{ map_get($prct , 58%) }, #{ map_get($prct , 100%) } {
-                    transform: translateX(0%);
-                }  
+                $x_positions : (
+                    0% + $x_increment, 
+                    $x_increment/2, 
+                    0%
+                );
 
             }
 
+            #{ 0% / $repeat + $prct_increment } {
+                transform: translateX(nth( $x_positions, 1 ));
+                animation-timing-function : cubic-bezier(.49,0,.74,1);        
+            }
 
+            #{ 12.5% / $repeat + $prct_increment } {
+                transform: translateX(nth( $x_positions, 2 ));
+                animation-timing-function :  cubic-bezier(.1,0,.62,.99);
+            }
+
+            #{ 29% / $repeat + $prct_increment }, #{ 100% / $repeat + $prct_increment } {
+                transform: translateX(nth( $x_positions, 3 ));
+            }  
             
-            $j : $j + 174%;
-        }
-
-        100% {
-            transform: translateX(0%);
         }
 
     }
 }
 
 @mixin pushed-ball-y {
-    // valeur de base des % de l'anim : 0, 25, 58, 79, 100
 
-
-    $repetitions : 2;
-    $magic-nb : 2;
-    $way-y : ( 1, -1 );
-
-    $prout : $repetitions * length($way-y) * $magic-nb;
-
-
-    $j : 0;
-
+    $repeat : map-get($loading_spinner, anim_division);
 
     @keyframes pushed-ball-y {
 
-        @for $i from 0 to $repetitions {
-            
-            
+        @for $i from 0 to $repeat {
 
-            @each $way in $way-y {  
+            $prct_increment : 100% / $repeat * $i;
 
-                $trucbidule : 100% / $repetitions / length($way-y) * $j;
-                $prct : (
-                    0%   : (0% / $prout) + $trucbidule,
-                    25%  : (25% / $prout) + $trucbidule,
-                    58%  : (58% / $prout) + $trucbidule,
-                    79%  : (79% / $prout) + $trucbidule,
-                    100% : (100% / $prout) + $trucbidule
-                );
+            $way-y : 1;
+            @if not ($i%2 == 0) { $way-y: -1; }
 
-                #{ map_get($prct , 0%) } {
+            #{ 0% / $repeat  + $prct_increment } {
+                transform: translateY(0);
+                animation-timing-function : cubic-bezier(0,.01,.13,1);  
+            }
+
+            #{ 12.5% / $repeat  + $prct_increment } {
+                transform: translateY(-152% * $way-y  );
+                animation-timing-function :  cubic-bezier(.63,.01,.76,1);
+            }
+
+            #{ 29% / $repeat  + $prct_increment } {
+                transform: translateY(0);
+                animation-timing-function :  cubic-bezier(0,0,.24,.99);
+            }
+
+            #{ 39.5% / $repeat  + $prct_increment } {
+                transform: translateY(13% * $way-y );
+                animation-timing-function : ease-in-out;
+            }
+
+            #{ 50% / $repeat  + $prct_increment } {
+                transform: translateY(0);
+            }
+
+            @if ($i == $repeat -1 ) {
+                #{ 100% / $repeat  + $prct_increment } {
                     transform: translateY(0);
-                    animation-timing-function : cubic-bezier(0,.01,.13,1);        
-                }
-
-                #{ map_get($prct , 25%) } {
-                    transform: translateY(-152% * $way );
-                    animation-timing-function :  cubic-bezier(.63,.01,.76,1);
-                }
-
-                #{ map_get($prct , 58%) } {
-                    transform: translateY(0);
-                    animation-timing-function :  cubic-bezier(0,0,.24,.99);
-                }
-
-                #{ map_get($prct , 79%) } {
-                    transform: translateY(13% * $way);
-                    animation-timing-function : ease-in-out;
-                }
-
-                #{ map_get($prct , 100%) } {
-                    transform: translateY(0);
-                }
-
-
-
-                $j : $j + 1 ;   
-
+                }  
             }
 
         }
 
-        100% {
-            transform: translateY(0);
-        }
-
-        
     }    
 }
