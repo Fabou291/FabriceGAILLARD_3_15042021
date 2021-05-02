@@ -2,6 +2,8 @@ $loading_spinner : (
     anim_division : 4
 );
 
+
+/// Mixin pushed-ball-x : Détermine les keyframes de l'animation sur les x
 @mixin pushed-ball-x {
 
     $repeat : map-get($loading_spinner, anim_division);
@@ -52,6 +54,7 @@ $loading_spinner : (
     }
 }
 
+/// Mixin pushed-ball-y : Détermine les keyframes de l'animation sur les y
 @mixin pushed-ball-y {
 
     $repeat : map-get($loading_spinner, anim_division);

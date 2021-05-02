@@ -43,7 +43,7 @@ $menuPaddingTop : 38px;
     }
 
     &__title {
-        @include typography('shrikhand');
+        @include typography('Shrikhand');
         color  : $secondary-font;
         font-size : 28px;
     }

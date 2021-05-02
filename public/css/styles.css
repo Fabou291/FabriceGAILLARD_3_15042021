@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* -- Colors -- */
+/*-- Fonts --*/
 /* -- Breakpoints -- */
 /*-- Ball -- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -994,7 +995,7 @@ button {
   margin: 0 5px 31px 5px;
 }
 .menu-restaurant__title {
-  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   color: #101010;
   font-size: 28px;
 }

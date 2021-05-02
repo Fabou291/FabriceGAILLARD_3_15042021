@@ -1,0 +1,11 @@
+@function isList($var){
+    @return type-of($var) == 'list';
+}
+
+@function isInList($list, $value) {
+    @return not (index($list, $value) == null);
+}
+
+
+
+
